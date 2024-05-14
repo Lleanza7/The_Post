@@ -16,12 +16,26 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
+                @if ($article->category_id)
+                    @php
+                        $varCategory = $article->category->name;
+                        $varUrlCategory = route('article.byCategory', ['category' => $article->category->id]);
+                    @endphp
+                @else
+                    @php
+                        $varCategory = '';
+                        $varUrlCategory = '#';
+                    @endphp
+                @endif
                 <div class="col-12 col-md-3">
                     <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}" image="{{ $article->image }}"
-                        category="{{ $article->category->name }}" data="{{ $article->created_at->format('d/m/Y') }}"
+                        category="{{ $varCategory }}"
+                        urlCategory="{{ $varUrlCategory }}"
+                        {{--                         @if ($article->category) category="{{ $article->category->name }}"  urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
+                        @else category="Non categorizzato"  urlCategory="#"
+                        @endif --}} data="{{ $article->created_at->format('d/m/Y') }}"
                         url="{{ route('article.show', compact('article')) }}" user="{{ $article->user->name }}"
-                        urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" />
+                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" :tags="$article->tags" />
                 </div>
             @endforeach
         </div>

@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Tag;
 use App\Models\Category;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,11 +22,17 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {
+    {   
+        // $categories in tutte le view
         if(Schema::hasTable('categories')) {
             $categories = Category::all();
             View::share(['categories' => $categories]);
-            
+        }
+
+        // $tags in tutte le view
+        if(Schema::hasTable('tags')) {
+            $tags = Tag::all();
+            View::share(['tags' => $tags]);
         }
     }
 }

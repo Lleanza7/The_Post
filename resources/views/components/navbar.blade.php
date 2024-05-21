@@ -30,6 +30,11 @@
                             <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard Revisore</a>
                         </li>
                     @endif
+                    @if (Auth::user()->is_writer)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard Redattore</a>
+                        </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -63,9 +68,9 @@
             </ul>
         </div>
         <form class="d-flex" method="GET" action="{{ route('article.search') }}">
-          <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search"
-              name="query">
-          <button class="btn btn-outline-info" type="submit">Cerca</button>
-      </form>
+            <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search"
+                name="query">
+            <button class="btn btn-outline-info" type="submit">Cerca</button>
+        </form>
     </div>
 </nav>

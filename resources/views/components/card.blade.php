@@ -9,6 +9,7 @@
         @else
             <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
         @endif
+        <span class="text-muted small fst-italic">Tempo di lettura {{$readDuration}} min</span>
         
         @if($tags)
             <p class="small fst-italic text-capitalize">

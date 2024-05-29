@@ -35,7 +35,8 @@
                         @else category="Non categorizzato"  urlCategory="#"
                         @endif --}} data="{{ $article->created_at->format('d/m/Y') }}"
                         url="{{ route('article.show', compact('article')) }}" user="{{ $article->user->name }}"
-                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" :tags="$article->tags" />
+                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" :tags="$article->tags"
+                        readDuration="{{ $article->readDuration() }}" />
                 </div>
             @endforeach
         </div>

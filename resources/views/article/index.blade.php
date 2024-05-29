@@ -23,13 +23,11 @@
                 @endif
                 <div class="col-12 col-md-3">
                     <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}" image="{{ $article->image }}"
-                        category="{{ $varCategory }}"
-                        urlCategory="{{ $varUrlCategory }}"
-                        {{--                         @if ($article->category) category="{{ $article->category->name }}"  urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                        @else category="Non categorizzato"  urlCategory="#"
-                        @endif --}} data="{{ $article->created_at->format('d/m/Y') }}"
+                        category="{{ $varCategory }}" urlCategory="{{ $varUrlCategory }}"
+                        data="{{ $article->created_at->format('d/m/Y') }}"
                         url="{{ route('article.show', compact('article')) }}" user="{{ $article->user->name }}"
-                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" :tags="$article->tags" />
+                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" :tags="$article->tags"
+                        readDuration="{{ $article->readDuration() }}" />
                 </div>
             @endforeach
         </div>

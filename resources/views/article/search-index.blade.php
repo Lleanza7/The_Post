@@ -15,7 +15,9 @@
                         category="{{ $article->category->name }}" data="{{ $article->created_at->format('d/m/Y') }}"
                         url="{{ route('article.show', compact('article')) }}" user="{{ $article->user->name }}"
                         urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" />
+                        urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}" 
+                        readDuration="{{ $article->readDuration() }}"
+                        />
                 </div>
             @endforeach
         </div>

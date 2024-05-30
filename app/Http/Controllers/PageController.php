@@ -12,7 +12,7 @@ class PageController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('home');
+        $this->middleware('auth')->except('home', 'test');
     }
 
     public function home()
@@ -58,4 +58,11 @@ class PageController extends Controller
 
         return redirect(route('home'))->with('message', 'Grazie per averci contattato!');
     }
+
+
+    public function test(){
+        return view('test');
+    }
 }
+
+

@@ -1,9 +1,124 @@
 *{
     font-family: 'Cardo', "Hind", serif;
+
 }
 h1,h2,h3,h4{
     font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 p,h5,a,button{
     font-family: 'Hind', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+header{
+    background-image: url(/public/Header.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+header p,h2{
+    color: white;
+}
+
+header h2{
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    position: fixed;
+    top: 0px;
+
+}
+
+.logo{
+    flex: 1;
+  color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.centroNav{
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    border-left: 1px rgb(255, 255, 255) solid;
+    border-right: 1px rgb(255, 255, 255) solid;
+}
+.Boxsocial{
+    flex: 1;
+ 
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+}
+.social svg{
+ margin: 10px;
+width: 30px;
+color: white;
+
+}
+
+.search{
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.search input{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    width: 40px;
+    transition: width 1s;
+  margin: 0px 10px;
+}
+
+.search input:hover{
+   
+    width: 150px;
+    transition: width 1s;
+    
+}
+
+.BoxNavItem{
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+ 
+
+
+}
+.navItem{
+display: flex;
+flex: 1;
+justify-content: center;
+align-items: center;
+border: 1px solid rgb(255, 255, 255);
+height: 100%;
+color: white;
+border-bottom: 0px solid white;
+border-left: 0px solid white;
+text-align: center;
+
 }

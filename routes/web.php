@@ -66,3 +66,8 @@ Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name(
 Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
 Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
+
+
+//rotta test
+
+Route::get('/test', [PageController::class, 'test'])->name('test');

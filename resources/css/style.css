@@ -1,39 +1,86 @@
-*{
+* {
     font-family: 'Cardo', "Hind", serif;
 
 }
-h1,h2,h3,h4{
+
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-p,h5,a,button{
+
+p,
+h5,
+a,
+button {
     font-family: 'Hind', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 
+@font-face {
+    font-family: "sottile";
+    src: url("/public/Font/Shree714.ttc");
+}
 
 
 
 
-header{
+header {
     background-image: url(/public/Header.jpg);
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-position: center;
+    background-size: cover;
+
 
 }
-header p,h2{
+
+
+header p {
+    font-family: sottile;
     color: white;
+    font-size: 12px;
 }
 
-header h2{
-    font-size: 70px;
-    font-weight: 100;
+header h2 {
+    font-size: clamp(2rem, 5vw, 8rem);
+    color: white;
+    text-align: center;
 }
 
-.nav2{
+.containerFeautured {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFeautured H6{
+    font-size: 12px;
+    font-family: sottile;
+    font-weight: 600;
+}
+
+.containerFeautured p {
+    font-size: 12px;
+    font-family: 'Cardo', "Hind", serif ;
+    letter-spacing: 2px;
+}
+
+
+.logo h1,.logoMobile h1 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+.nav2 {
     width: 100%;
     height: 120px;
     display: flex;
@@ -43,16 +90,16 @@ header h2{
 
 }
 
-.logo{
+.logo {
     flex: 1;
-  color: white;
+    color: white;
     display: flex;
     justify-content: end;
     align-items: center;
     padding-right: 30px;
 }
 
-.centroNav{
+.centroNav {
     flex: 2;
 
     display: flex;
@@ -60,22 +107,25 @@ header h2{
     border-left: 1px rgb(255, 255, 255) solid;
     border-right: 1px rgb(255, 255, 255) solid;
 }
-.Boxsocial{
+
+.Boxsocial {
     flex: 1;
- 
+
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 30px;
 }
-.social svg{
- margin: 10px;
-width: 30px;
-color: white;
+
+.social svg {
+    margin: 10px;
+    width: 30px;
+    color: white;
+
 
 }
 
-.search{
+.upNav {
 
     flex: 1;
     display: flex;
@@ -85,40 +135,108 @@ color: white;
 
 }
 
-.search input{
+.upNav input {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
     width: 40px;
     transition: width 1s;
-  margin: 0px 10px;
-}
-
-.search input:hover{
-   
-    width: 150px;
-    transition: width 1s;
+    margin: 0px 10px;
+    color: white;
     
 }
 
-.BoxNavItem{
+.upNav input:hover {
+
+    width: 150px;
+    transition: width 1s;
+
+}
+
+.BoxNavItem {
 
     flex: 1;
     display: flex;
     align-items: center;
- 
+
 
 
 }
-.navItem{
-display: flex;
-flex: 1;
-justify-content: center;
-align-items: center;
-border: 1px solid rgb(255, 255, 255);
-height: 100%;
-color: white;
-border-bottom: 0px solid white;
-border-left: 0px solid white;
-text-align: center;
+
+.navItem {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    height: 100%;
+    color: white;
+    border-bottom: 0px solid white;
+    border-left: 0px solid white;
+    text-align: center;
+    font-family: sottile;
+    font-size: clamp(0.5rem, 1.8vw, 0.8rem);
+    padding: 10px 10px;
+    white-space: nowrap;
+
+}
+
+.menuMobile{
+    display: none;
+
+}
+.logoMobile{
+    display: none;
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 1024px){
+
+.logo{
+    display: none;
+}
+.Boxsocial{
+    display: none;
+}
+
+
+.logoMobile{
+    display: block;
+  
+}
+.upNav{
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.centroNav {
+    border: none;
+}
+
+}
+/*Mobile*/
+@media screen and (max-width: 700px){
+.BoxNavItem{
+    display: none;
+}
+.nav2{
+    border: none;
+}
+.menuMobile{
+    display: block;
+}
+
+.upNav input{
+   display: none;
+
+}
+
+
+
+.search svg{
+    display: block;
+}
+
+
 
 }

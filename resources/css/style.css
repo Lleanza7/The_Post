@@ -1,7 +1,13 @@
 * {
     font-family: 'Cardo', "Hind", serif;
-
+    
 }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 h1,
 h2,
@@ -138,7 +144,7 @@ header h2 {
 .upNav input {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
-    width: 40px;
+    width: 60px;
     transition: width 1s;
     margin: 0px 10px;
     color: white;
@@ -153,13 +159,46 @@ header h2 {
 }
 
 .BoxNavItem {
-
     flex: 1;
     display: flex;
     align-items: center;
+}
+
+.navItem svg {
+    display: none;
+    
+}
+
+.navItem span {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
 
 
 
+.navItem:hover span {
+    display:none; /* Rende il testo trasparente */
+}
+
+.navItem:hover svg {
+    display: block;
+}
+
+
+.navItem:hover{
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+
+
+.BoxNavItem a:hover{
+    color: white;
+}
+
+.BoxNavItem a {
+    color: white;
+    text-decoration: none;
 }
 
 .navItem {
@@ -177,6 +216,7 @@ header h2 {
     font-size: clamp(0.5rem, 1.8vw, 0.8rem);
     padding: 10px 10px;
     white-space: nowrap;
+    transition: 0.1s ease-in-out;
 
 }
 
@@ -186,6 +226,11 @@ header h2 {
 }
 .logoMobile{
     display: none;
+}
+
+.search {
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -236,6 +281,7 @@ header h2 {
 .search svg{
     display: block;
 }
+
 
 
 

@@ -1,6 +1,6 @@
 * {
     font-family: 'Cardo', "Hind", serif;
-    
+
 }
 
 a {
@@ -49,26 +49,26 @@ header {
 
 header p {
     font-family: sottile;
-    color: white;
+    color: #dde1e7;
     font-size: 12px;
 }
 
 header h2 {
     font-size: clamp(2rem, 5vw, 8rem);
-    color: white;
+    color: #dde1e7;
     text-align: center;
 }
 
 .containerFeautured {
     position: absolute;
     bottom: 0;
-    color: white;
+    color: #dde1e7;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.containerFeautured H6{
+.containerFeautured H6 {
     font-size: 12px;
     font-family: sottile;
     font-weight: 600;
@@ -76,24 +76,32 @@ header h2 {
 
 .containerFeautured p {
     font-size: 12px;
-    font-family: 'Cardo', "Hind", serif ;
+    font-family: 'Cardo', "Hind", serif;
     letter-spacing: 2px;
 }
 
 
-.logo h1,.logoMobile h1 {
+.logo h1,
+.logoMobile h1 {
     font-size: 30px;
     margin: 0px;
 }
 
 .nav2 {
     width: 100%;
-    height: 120px;
+    height: 100px;
     display: flex;
-    border-bottom: solid 1px rgb(255, 255, 255);
+    border-bottom: solid 0.5px rgb(255, 255, 255);
     position: fixed;
-    top: 0px;
+    top: 0;
+    z-index: 34;
 
+
+
+    background: rgba(0, 0, 0, 0.113);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
 }
 
 .logo {
@@ -103,15 +111,17 @@ header h2 {
     justify-content: end;
     align-items: center;
     padding-right: 30px;
+
 }
+
 
 .centroNav {
     flex: 2;
 
     display: flex;
     flex-direction: column;
-    border-left: 1px rgb(255, 255, 255) solid;
-    border-right: 1px rgb(255, 255, 255) solid;
+    border-left: 0.5px rgb(255, 255, 255) solid;
+    border-right: 0.5px rgb(255, 255, 255) solid;
 }
 
 .Boxsocial {
@@ -126,7 +136,7 @@ header h2 {
 .social svg {
     margin: 10px;
     width: 30px;
-    color: white;
+    color: #dde1e7;
 
 
 }
@@ -137,7 +147,7 @@ header h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #dde1e7;
 
 }
 
@@ -147,8 +157,8 @@ header h2 {
     width: 60px;
     transition: width 1s;
     margin: 0px 10px;
-    color: white;
-    
+    color: #dde1e7;
+
 }
 
 .upNav input:hover {
@@ -166,7 +176,7 @@ header h2 {
 
 .navItem svg {
     display: none;
-    
+
 }
 
 .navItem span {
@@ -178,7 +188,8 @@ header h2 {
 
 
 .navItem:hover span {
-    display:none; /* Rende il testo trasparente */
+    display: none;
+    /* Rende il testo trasparente */
 }
 
 .navItem:hover svg {
@@ -186,13 +197,13 @@ header h2 {
 }
 
 
-.navItem:hover{
+.navItem:hover {
     background-color: rgba(255, 255, 255, 0.137);
 }
 
 
 
-.BoxNavItem a:hover{
+.BoxNavItem a:hover {
     color: white;
 }
 
@@ -206,11 +217,11 @@ header h2 {
     flex: 1;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(255, 255, 255);
+    border: 0.5px solid rgb(255, 255, 255);
     height: 100%;
-    color: white;
-    border-bottom: 0px solid white;
-    border-left: 0px solid white;
+    color: #dde1e7;
+    border-bottom: 0px solid #dde1e7;
+    border-left: 0px solid #dde1e7;
     text-align: center;
     font-family: sottile;
     font-size: clamp(0.5rem, 1.8vw, 0.8rem);
@@ -220,11 +231,12 @@ header h2 {
 
 }
 
-.menuMobile{
+.menuMobile {
     display: none;
 
 }
-.logoMobile{
+
+.logoMobile {
     display: none;
 }
 
@@ -235,54 +247,156 @@ header h2 {
 
 
 /*Tablet*/
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
 
-.logo{
-    display: none;
-}
-.Boxsocial{
-    display: none;
-}
+    .logo {
+        display: none;
+    }
+
+    .Boxsocial {
+        display: none;
+    }
 
 
-.logoMobile{
-    display: block;
-  
-}
-.upNav{
-    justify-content: space-between;
-    padding: 0px 20px;
+    .logoMobile {
+        display: block;
+
+    }
+
+    .upNav {
+        justify-content: space-between;
+        padding: 0px 20px;
+
+    }
+
+    .centroNav {
+        border: none;
+
+    }
+
 }
 
-.centroNav {
-    border: none;
-}
-
-}
 /*Mobile*/
-@media screen and (max-width: 700px){
-.BoxNavItem{
-    display: none;
+@media screen and (max-width: 700px) {
+    .BoxNavItem {
+        display: none;
+
+
+    }
+
+    .nav2 {
+        border: none;
+    }
+
+    .menuMobile {
+        display: block;
+    }
+
+    .upNav input {
+        display: none;
+
+    }
+
+
+
+    .search svg {
+        display: block;
+    }
+
 }
-.nav2{
-    border: none;
-}
-.menuMobile{
-    display: block;
-}
 
-.upNav input{
-   display: none;
+.test {
+    background: #dde1e7;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 0px;
 
-}
-
-
-
-.search svg{
-    display: block;
 }
 
+.containerCard1 {
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30px
+}
+
+.containerCard2 {
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHomeLarge {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 30px;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    background: #dde1e7;
+    transition-duration: 4s;
+
+}
+
+.cardHomeSmall {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 30px;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    background: #dde1e7;
+
+
+}
 
 
 
+
+.cardHomeLarge:hover {
+    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+
+
+}
+
+.cardHomeSmall:hover {
+    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.divImg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 30px;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.boxCards {
+    width: 55%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.boxDivImg {
+    width: 45%;
+    ;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }

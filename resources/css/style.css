@@ -44,25 +44,26 @@ header {
     background-size: cover;
 
 
+
 }
 
 
 header p {
     font-family: sottile;
-    color: #dde1e7;
+    color: #ffffff;
     font-size: 12px;
 }
 
 header h2 {
     font-size: clamp(2rem, 5vw, 8rem);
-    color: #dde1e7;
+    color: #ffffff;
     text-align: center;
 }
 
 .containerFeautured {
     position: absolute;
     bottom: 0;
-    color: #dde1e7;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,7 +190,7 @@ header h2 {
 
 .navItem:hover span {
     display: none;
-    /* Rende il testo trasparente */
+   
 }
 
 .navItem:hover svg {
@@ -246,68 +247,11 @@ header h2 {
 }
 
 
-/*Tablet*/
-@media screen and (max-width: 1024px) {
-
-    .logo {
-        display: none;
-    }
-
-    .Boxsocial {
-        display: none;
-    }
 
 
-    .logoMobile {
-        display: block;
-
-    }
-
-    .upNav {
-        justify-content: space-between;
-        padding: 0px 20px;
-
-    }
-
-    .centroNav {
-        border: none;
-
-    }
-
-}
-
-/*Mobile*/
-@media screen and (max-width: 700px) {
-    .BoxNavItem {
-        display: none;
-
-
-    }
-
-    .nav2 {
-        border: none;
-    }
-
-    .menuMobile {
-        display: block;
-    }
-
-    .upNav input {
-        display: none;
-
-    }
-
-
-
-    .search svg {
-        display: block;
-    }
-
-}
 
 .test {
-    background: #dde1e7;
-    width: 100%;
+    background: #f2f4f7;
     height: auto;
     display: flex;
     align-items: start;
@@ -320,9 +264,10 @@ header h2 {
 .containerCard1 {
     width: 50%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 0px 30px
+    margin: 0px 30px;
+    display: flex;
 }
 
 .containerCard2 {
@@ -330,55 +275,47 @@ header h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .cardHomeLarge {
     width: 100%;
-    height: 60vh;
+    height: auto;
     margin-bottom: 30px;
+    position: relative;
+    background: #ffffff;
     box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
     transition: box-shadow 11s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    background: #dde1e7;
-    transition-duration: 4s;
+    display: flex;
+    flex-direction: column;
+   
+  
+
 
 }
 
 .cardHomeSmall {
     width: 100%;
-    height: 45vh;
+    height: 50vh;
     margin-bottom: 30px;
-    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    position: relative;
+    background: #ffffff;
+box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
     transition: box-shadow 11s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    background: #dde1e7;
-
 
 }
 
 
 
 
-.cardHomeLarge:hover {
-    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
-
-
-}
-
-.cardHomeSmall:hover {
-    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
-
-}
 
 .divImg {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     margin-bottom: 30px;
     box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
     transition: box-shadow 11s ease-in-out;
@@ -386,17 +323,310 @@ header h2 {
 }
 
 .boxCards {
-    width: 55%;
+    width: 60%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: start;
+
 }
 
 .boxDivImg {
-    width: 45%;
-    ;
+    width: 40%;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 100px;
 }
+
+.imgCardLarge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+ background-attachment: fixed;
+}
+
+.imgCardLarge {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+.infoCardLarge {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    align-items: start;
+    margin-top: 20px;
+    height: 100%;
+
+
+}
+
+.infoCardDateLarge {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(94, 94, 94, 0.733);
+}
+
+.infoCardDateLarge p {
+    font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+.infoCardDateSmall p {
+    font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+.infoCardLarge,
+h4 {
+    font-size: clamp(0.8rem, 1.3vw, 1.8rem);
+    font-weight: 800;
+    text-align: center;
+    text-align: start;
+ 
+
+
+}
+
+.infoCardDateSmall h4 {
+    font-size: clamp(1rem, 1.3vw, 1.8rem);
+    font-weight: 800;
+    
+   
+
+}
+
+.categoryCard {
+    padding-right: 30px;
+    font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.divHover {
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(245, 222, 179, 0);
+    top: 0;
+    transition: border 0.5s;
+    margin-top: 20px;
+    z-index: 77;
+
+}
+
+.divHover:hover {
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: border 0.5s;
+}
+
+
+
+.divHoverSmall {
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color:rgba(255, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: border 0.5s;
+   
+    z-index: 77;
+    
+
+}
+
+.divHoverSmall:hover {
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+   
+    transition: border 0.5s;
+
+}
+
+.cardHomeSmall img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.infoSmallCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background-color: white;
+    align-items: center;
+      
+
+}
+
+.infoCardDateSmall {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(94, 94, 94, 0.733);
+    margin-top: 10px;
+
+
+}
+
+
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 300px;
+    
+    background-image: url(/public/footer.jpg);
+    background-position:center ;
+    background-size: cover;
+ 
+    
+}
+
+
+
+/*Tablet*/
+@media screen and (max-width: 1124px) {
+
+    .logo {
+        display: none;
+    }
+
+    .Boxsocial {
+        display: none;
+    }
+
+    .logoMobile {
+        display: block;
+    }
+
+    .upNav {
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .centroNav {
+        border: none;
+    }
+    .test{
+        flex-direction: column;
+       
+    }
+
+    .boxDivImg{
+        width: 100%;
+        position: static;
+ 
+    }
+    .boxCards{
+        width: 100%;
+    }
+
+    .imgCardLarge{
+        height: 50vh;
+    }
+
+    .containerCard1{
+      
+        margin: 0px 5px;
+       
+    }
+    .containerCard2{
+      
+        margin: 0px 5px;
+    }
+
+    .cardHomeSmall{
+margin-bottom: 10px;
+margin-top: 10px;
+    }
+
+    .cardHomeLarge{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+#test2{
+    flex-direction: column-reverse;
+}
+
+#test4{
+    flex-direction: column-reverse;
+}
+
+.divImg{
+    height: 25vh;
+}
+
+.infoSmallCard,.infoCardLarge{
+    padding: 1.5vw; 
+}
+  
+}
+
+/*Mobile*/
+@media screen and (max-width: 700px) {
+    .BoxNavItem {
+        display: none;
+    }
+
+    .nav2 {
+        border: none;
+        height: 75px;
+    }
+
+    .menuMobile {
+        display: block;
+    
+    }
+
+    .upNav input {
+        display: none;
+
+    }
+    .search svg {
+        display: block;
+    }
+    .imgCardLarge{
+        height: 35vh;
+
+    }
+   
+
+    .cardHomeLarge{
+        height: 50vh;
+  
+    }
+    .cardHomeSmall{
+        height: 40vh;
+ 
+    }
+.divImg{
+    height: 15vh;
+}
+
+
+
+}
+

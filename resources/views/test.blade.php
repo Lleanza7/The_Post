@@ -15,95 +15,381 @@
         <H2>Notizie globali e voci locali, il tuo <br> spazio per informarti e esprimerti.</H2>
         <div class="containerFeautured">
             <h6>IN EVIDENZA</h6>
-            <p>Politica - Economia - Sport - Tecnologia - Arte </p>
+            <p>Politica - Finanza - Sport - Tech</p>
         </div>
     </header>
     <main>
+
+
         <div class="test">
             <div class="boxDivImg">
-                <div class="divImg"
-                    style=" background-image:url(https://external-preview.redd.it/O8Cq7qG0goqK4qz2DhodBsMEdRJk8r24CSPCnW43SiM.jpg?width=640&crop=smart&auto=webp&s=41d40f136132b1119a981720273ab060d16f37ca);">
+                <div  class="divImg"
+                    style="  background-image: url(./storage/POLITICA.png);">
                 </div>
             </div>
             <div class="boxCards">
                 <div class="containerCard1">
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
                 <div class="containerCard2">
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="test">
+
+
+
+
+        <div id="test2" class="test">
             <div class="boxCards">
                 <div class="containerCard2">
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
                 <div class="containerCard1">
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="boxDivImg">
                 <div class="divImg"
-                    style="background-image:url(https://wallpaperswide.com/download/apple_on_black_background-wallpaper-1400x1050.jpg);">
+                style="  background-image: url(./storage/FINANZA.png);">
                 </div>
             </div>
         </div>
+
         <div class="test">
             <div class="boxDivImg">
                 <div class="divImg"
-                    style="background-image:url(https://i.pinimg.com/736x/7e/aa/a0/7eaaa0c512de8516c39ce626167cb027.jpg);">
+                style="  background-image: url(./storage/SPORT.png);">
                 </div>
             </div>
             <div class="boxCards">
                 <div class="containerCard1">
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
                 <div class="containerCard2">
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div style="position:-webkit-sticky;position:sticky;top:0;"class="test">
+
+        <div id="test4" style="position:-webkit-sticky;position:sticky;top:0;"class="test">
             <div class="boxCards">
                 <div class="containerCard2">
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
                 <div class="containerCard1">
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
-                    <div class="cardHomeSmall"></div>
-                    <div class="cardHomeLarge"></div>
+                    <div class="cardHomeSmall">
+                        <div class="divHoverSmall"></div>
+                        <img src="https://compass-media.vogue.it/photos/654b99d6f0a0f6107a33b06c/1:1/w_1600%2Cc_limit/1781300253"
+                            alt="">
+
+                        <div class="infoSmallCard">
+                            <div>
+                                <div class="infoCardDateSmall">
+                                    <p class="categoryCard">ARCHITECTURE </p>
+                                    <p>28 MAY 2024</p>
+                                </div>
+                                <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                    Architecture and Nature</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="cardHomeLarge">
+
+                        <div class="imgCardLarge">
+                            <img src="https://w0.peakpx.com/wallpaper/345/391/HD-wallpaper-johnny-depp-black-and-white.jpg"
+                                alt="">
+                            <div class="divHover"></div>
+                        </div>
+
+                        <div class="infoCardLarge">
+                            <div class="infoCardDateLarge">
+                                <p class="categoryCard">ARCHITECTURE </p>
+                                <p>28 MAY 2024</p>
+                            </div>
+                            <h4>Brutalist Plants: A Photography Book Showcases the Wondrous Fusion of Brutalist
+                                Architecture and Nature</h4>
+                        </div>
+
+
+
+                    </div>
+
                 </div>
             </div>
             <div class="boxDivImg">
                 <div class="divImg"
-                    style="background-image:url(https://i.pinimg.com/736x/ab/5c/a5/ab5ca5441028a548a87120025f0e78d1.jpg);">
+                style="  background-image: url(./storage/TECH.png);">
                 </div>
             </div>
         </div>
     </main>
+    <footer></footer>
 </body>
 
 </html>

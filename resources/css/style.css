@@ -67,7 +67,9 @@ header h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
+
 
 .containerFeautured H6 {
     font-size: 12px;
@@ -582,6 +584,8 @@ margin-top: 10px;
 .infoSmallCard,.infoCardLarge{
     padding: 1.5vw; 
 }
+
+
   
 }
 
@@ -625,6 +629,9 @@ margin-top: 10px;
 .divImg{
     height: 15vh;
 }
+
+
+
 
 
 

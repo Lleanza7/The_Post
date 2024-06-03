@@ -34,6 +34,7 @@
                             politiche
                             pubbliche e molto altro.
                         </p>
+                        <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>
@@ -179,13 +180,14 @@
                     @endforeach
                 </div>
             </div>
-            <div class="boxDivImg">
+            <div  class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
                         <h2> ECONOMIA</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
                             perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
                             accusantium asperiores iure dolor expedita officiis?</p>
+                            <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>
@@ -201,6 +203,7 @@
                             perspiciatis doloribus quam quas sed ut vitae! Temporibus molestiae adipisci laborum
                             repellendus commodi officiis molestias beatae exercitationem.
                         </p>
+                        <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>
@@ -353,6 +356,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
                             perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
                             accusantium asperiores iure dolor expedita officiis?</p>
+                            <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>
@@ -368,6 +372,7 @@
                             perspiciatis doloribus quam quas sed ut vitae! Temporibus molestiae adipisci laborum
                             repellendus commodi officiis molestias beatae exercitationem.
                         </p>
+                        <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>
@@ -465,7 +470,6 @@
                             <div class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
-
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -520,6 +524,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
                             perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
                             accusantium asperiores iure dolor expedita officiis?</p>
+                            <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
             </div>

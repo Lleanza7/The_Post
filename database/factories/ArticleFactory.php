@@ -17,13 +17,12 @@ class ArticleFactory extends Factory
      */
     public function definition(): array
     {
-        $defaultImagePath = 'public/images/default.jpg';
+        $defaultImagePath = '/default.jpg';
         return [
             'title' => $this->faker->sentence(),
             'subtitle' => $this->faker->sentence(),
             'body' => $this->faker->text(),
             'image' => $defaultImagePath,
-            'category_id' => rand(1,6),
             'user_id' => rand(1,10),
             'slug' => $this->faker->slug(),
             

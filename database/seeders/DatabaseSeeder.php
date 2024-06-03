@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
@@ -21,10 +22,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $categories = Category::all();
 
-        \App\Models\Article::factory(10)->create();
-        
-        
+        foreach($categories as $category) {
+            Article::factory(4)->create(['category_id' => $category->id]);
+        }
 
         foreach (Article::all() as $article) {
             $article->slug = Str::slug($article->title);

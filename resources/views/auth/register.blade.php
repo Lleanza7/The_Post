@@ -12,13 +12,17 @@
 
   <main class="mainLogin">
         <div class="boxImgLogin">
-            <a  href="{{route('home')}}">
-                <h1> THE|POST</h1>
-            </a>
+            <div class="logoMobileLogin"> <x-navbar-new /></div>
         </div>
     
     
         <div class="boxForm">
+            <div class="logoLogin">
+                <a  href="{{route('home')}}">
+                    <h1> THE|POST</h1>
+                </a>
+            </div>
+
     
     <h3>Registrati</h3>
     <form action="{{route('register')}}" method="POST">

@@ -168,7 +168,11 @@ header h2 {
     border: 0.5px solid rgba(255, 255, 255, 0.395);
     padding: 0px 5px;
     border-radius: 30px;
+    
+}
 
+.logoMobileLogin{
+    display: none;
 }
 
 .BoxNavItem {
@@ -396,7 +400,7 @@ header h2 {
     align-items: center;
     font-size: 13px;
     color: rgba(94, 94, 94, 0.733);
-  
+
 }
 
 .infoCardDateLarge p {
@@ -407,15 +411,15 @@ header h2 {
 .infoCardDateSmall p {
     font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: clamp(0.6rem, 1vw, 0.8rem);
-    
+
 }
 
 .infoCardLarge h4 {
     font-size: clamp(0.8rem, 1.5vw, 1.5rem);
-    
+
     text-align: start;
     height: 50px;
-    
+
 
 
 
@@ -427,7 +431,7 @@ header h2 {
 
 }
 
-.infoSmallCard h4{
+.infoSmallCard h4 {
     font-size: clamp(0.8rem, 1.3vw, 1.8rem);
 }
 
@@ -499,7 +503,7 @@ header h2 {
     margin-right: 20px;
     background-color: white;
     align-items: start;
-   width: 20vw;
+    width: 20vw;
 
 
 
@@ -512,7 +516,7 @@ header h2 {
     font-size: 13px;
     color: rgba(94, 94, 94, 0.733);
     margin-top: 10px;
-   
+
 
 
 }
@@ -541,7 +545,7 @@ header h2 span {
 
 input::placeholder {
     color: rgba(255, 255, 255, 0.505);
-    text-align: center;
+    text-align: start;
 
 }
 
@@ -570,7 +574,7 @@ input::placeholder {
     font-family: sottile;
     padding-top: 0px;
     font-size: clamp(0.7rem, 1.5vw, 1.0rem);
-    
+
 }
 
 
@@ -599,56 +603,82 @@ input::placeholder {
 }
 
 
-.mainLogin{
+.mainLogin {
     display: flex;
 }
 
-.boxImgLogin{
+.boxImgLogin {
     background-image: url(/public/Header.jpg);
     height: 100vh;
     width: 40%;
- background-position: center;
- background-size: cover;
- display: flex;
- justify-content: center;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
-.boxForm{
+
+.boxForm {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    flex-direction: column;
+    position: relative;
+}
+
+.logoLogin {
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-height: 100vh;
-width: 60%;
-flex-direction: column;
-}
+    margin-bottom: 200px;
+    margin-top: 40px;
 
-.boxForm h3{
-    font-size: 40px;
 }
-
-.boxForm input{
-    border: #000000a2 0.5px solid;
-    padding: 15px 60px;
-    border-radius: 40px;
+.logoLogin a{
+    color: black;
   
 }
 
-.boxForm form{
+.boxForm h3 {
+    font-size: clamp(2rem, 2.5vw, 2.2rem);
+}
+
+.boxForm input {
+    border: #000000a2 0.5px solid;
+    padding: 15px 10px;
+    animation: animated-text2 4s ease-out 0ms 1 normal both;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.047);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
+    width: 350px;
+    border-radius: 0px;
+    background-color: #00000000;
+
+}
+
+.boxForm form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
 }
-.boxForm form p,a{
+
+.boxForm form p,
+a {
     margin-top: 12px;
     font-family: sottile;
 }
-.boxImgLogin h1{
+
+.boxImgLogin h1 {
     color: white;
     margin: 20px 50px;
 }
 
-.bottomLogin{
+.bottomLogin {
     border: 1px white solid;
     padding: 10px 50px;
     font-family: sottile;
@@ -658,17 +688,22 @@ flex-direction: column;
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: clamp(0.7rem, 1.5vw, 1.0rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.0rem);
     text-align: center;
     border-radius: 30px;
     margin-top: 30px;
     transition: all 0.5s;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
 }
-.boxForm div{
+
+.boxForm div {
     height: auto;
 }
 
-.bottomLogin:hover{
+.bottomLogin:hover {
     color: black;
     border: 1px rgb(0, 0, 0) solid;
     background-color: white;
@@ -683,10 +718,21 @@ flex-direction: column;
     }
 
     to {
-        width: 200px;
+        width: 180px;
     }
 }
 
+
+@keyframes animated-text2 {
+
+    from {
+        width: 150px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
@@ -771,28 +817,29 @@ flex-direction: column;
         padding: 1.5vw;
     }
 
-.infoSmallCard{
-    height: auto;
-    width: 40vw;
-    
-   
-}
+    .infoSmallCard {
+        height: auto;
+        width: 40vw;
 
-.infoSmallCard h4{
-    height: auto;
-    
-}
-    .imgCardLarge{
+
+    }
+
+    .infoSmallCard h4 {
+        height: auto;
+
+    }
+
+    .imgCardLarge {
         height: 480px;
     }
-    
-    .cardHomeSmall img{
+
+    .cardHomeSmall img {
         height: 460px;
     }
 
-.boxDivImg{
-    margin: 0px;
-}
+    .boxDivImg {
+        margin: 0px;
+    }
 
 }
 
@@ -846,42 +893,77 @@ flex-direction: column;
     }
 
 
-.imgCardLarge{
-    height: 280px;
-}
-
-.cardHomeSmall img{
-    height: 260px;
-}
-
-.infoSmallCard{
-    height: auto;
-    width: auto;
-}
-
-
-
-
-
-@keyframes animated-text {
-
-    from {
-        width: 0;
+    .imgCardLarge {
+        height: 280px;
     }
 
-    to {
-        width: 130px;
+    .cardHomeSmall img {
+        height: 260px;
     }
+
+    .infoSmallCard {
+        height: auto;
+        width: auto;
+    }
+
+
+.mainLogin{
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.boxImgLogin{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+  justify-content: center;
+  align-items: start;
+
+}
+.boxImgLogin a{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+ 
 }
 
-
-
-
-.infoCardDateLarge p, .infoCardDateSmall p{
-    margin: 0px;
-    margin-bottom: 5px;
+.logoMobileLogin{
+    width: 100%;
+    display: block;
 }
 
+.boxForm{
+    height: 65vh;
 }
 
+.boxForm h3{
+    margin-top: 30px;
+}
 
+.logoLogin{
+    display: none;
+
+} 
+
+
+    @keyframes animated-text {
+
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 130px;
+        }
+    }
+
+
+
+
+    .infoCardDateLarge p,
+    .infoCardDateSmall p {
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+}

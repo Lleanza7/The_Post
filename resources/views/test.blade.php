@@ -184,9 +184,7 @@
                 <div class="divImg">
                     <div class="boxDivImgGlass">
                         <h2> ECONOMIA</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
-                            perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
-                            accusantium asperiores iure dolor expedita officiis?</p>
+                        <p>Approfondisci le dinamiche economiche a livello globale e locale. Leggi analisi e aggiornamenti su mercati finanziari, politiche economiche, tendenze di mercato e come questi fattori influenzano il mondo degli affari e la vita quotidiana.</p>
                             <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
@@ -199,9 +197,7 @@
                 <div class="divImg">
                     <div class="boxDivImgGlass">
                         <h2> FOOD&DRINK</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maiores nobis quia quaerat
-                            perspiciatis doloribus quam quas sed ut vitae! Temporibus molestiae adipisci laborum
-                            repellendus commodi officiis molestias beatae exercitationem.
+                        <p>Immergiti nel mondo del cibo e delle bevande con ricette, recensioni di ristoranti e consigli su vini e cocktail. Scopri tendenze culinarie, esplora cucine internazionali e trova ispirazione per i tuoi pasti quotidiani e le occasioni speciali.
                         </p>
                         <button class="buttonDivImgCat">Scopri..</button>
                     </div>
@@ -353,9 +349,8 @@
                 <div class="divImg">
                     <div class="boxDivImgGlass">
                         <h2> SPORT</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
-                            perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
-                            accusantium asperiores iure dolor expedita officiis?</p>
+                        <p>Esplora il mondo dello sport con notizie, risultati e analisi delle tue discipline preferite. Dalle competizioni internazionali ai campionati locali, resta informato su tutto ciò che accade nel mondo dello sport.
+                        </p>
                             <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>
@@ -367,10 +362,8 @@
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
-                        <h2>INTRATTENIMENTO</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maiores nobis quia quaerat
-                            perspiciatis doloribus quam quas sed ut vitae! Temporibus molestiae adipisci laborum
-                            repellendus commodi officiis molestias beatae exercitationem.
+                        <h2 style="text-align: center">INTRATTENIMENTO</h2>
+                        <p>Tuffati nel mondo dell'intrattenimento con notizie su film, serie TV, musica e spettacoli dal vivo. Resta aggiornato sulle ultime uscite, leggi recensioni, scopri gossip sulle celebrità e segui gli eventi più importanti del panorama culturale e dello spettacolo.
                         </p>
                         <button class="buttonDivImgCat">Scopri..</button>
                     </div>
@@ -520,10 +513,8 @@
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
-                        <h2> SPORT</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque deserunt quibusdam autem
-                            perferendis consectetur possimus ut, cupiditate nostrum quae explicabo placeat rem unde
-                            accusantium asperiores iure dolor expedita officiis?</p>
+                        <h2> Tech</h2>
+                        <p>Scopri le ultime innovazioni e tendenze nel mondo della tecnologia. Dalle recensioni di nuovi gadget alle novità nel settore dell'IT, resta aggiornato su tutto ciò che riguarda la tecnologia e il suo impatto sul mondo.</p>
                             <button class="buttonDivImgCat">Scopri..</button>
                     </div>
                 </div>

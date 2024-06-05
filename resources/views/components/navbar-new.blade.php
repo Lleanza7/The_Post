@@ -52,30 +52,33 @@
                         <path
                             d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
                     </svg><span>ARTICOLI</span></a>
-
-                <div class="navItem" id="navItem">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-wrench-adjustable-circle" viewBox="0 0 16 16">
-                        <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
-                    </svg>
-                    <span>
-                        DASHBOARD
-                    </span>
-                    <div class="handmadeDropdown">
-                        @auth
-                            @if (Auth::user()->is_admin)
-                                <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
-                            @elseif (Auth::user()->is_revisor)
-                                <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
-                            @elseif (Auth::user()->is_writer)
-                                <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
-                                <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                            @endif
-                        @endauth
+                @auth
+                    <div class="navItem" id="navItem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-wrench-adjustable-circle" viewBox="0 0 16 16">
+                            <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+                        </svg>
+                        <span>
+                            DASHBOARD
+                        </span>
+                        <div class="handmadeDropdown">
+                            @auth
+                                @if (Auth::user()->is_admin)
+                                    <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                                @endif
+                                @if (Auth::user()->is_revisor)
+                                    <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
+                                @endif
+                                @if (Auth::user()->is_writer)
+                                    <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                                    <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
+                                @endif
+                            @endauth
+                        </div>
                     </div>
-                </div>
+                @endauth
 
                 <a class="navItem" href="{{ route('careers') }}"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                         height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
@@ -96,7 +99,7 @@
                                         d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
                                 </svg></button>
                         </form>
-                        <span>IL MIO ACCOUNT</span>
+                        <span>{{ Auth::user()->name }}: LOGOUT</span>
 
                     </a>
                 @endauth

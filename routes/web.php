@@ -70,4 +70,4 @@ Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'
 
 //rotta test
 
-Route::get('/test', [PageController::class, 'test'])->name('test');
+/* Route::get('/test', [PageController::class, 'test'])->name('test'); */

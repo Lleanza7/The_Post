@@ -16,12 +16,12 @@ class PageController extends Controller
         $this->middleware('auth')->except('home', 'test');
     }
 
-    public function home()
+/*     public function home()
     {
 
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
         return view('homepage', compact('articles'));
-    }
+    } */
 
     public function careers()
     {
@@ -61,7 +61,7 @@ class PageController extends Controller
     }
 
 
-    public function test()
+    public function home()
     {
         $articlePolitica = Article::where('category_id', 1)->take(4)->get();
         $articleEconomia = Article::where('category_id', 2)->take(4)->get();
@@ -71,7 +71,7 @@ class PageController extends Controller
         $articleTech = Article::where('category_id', 6)->take(4)->get();
 
         /* dd($articlePolitica); */
-        return view('test', compact('articlePolitica', 'articleEconomia', 'articleFood', 'articleSport', 'articleIntrattenimento', 'articleTech'));
+        return view('homepage', compact('articlePolitica', 'articleEconomia', 'articleFood', 'articleSport', 'articleIntrattenimento', 'articleTech'));
 
     }
 }

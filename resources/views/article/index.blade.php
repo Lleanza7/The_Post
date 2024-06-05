@@ -34,3 +34,6 @@
     </div>
 
 </x-layout>
+
+
+{{-- {{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }} --}}

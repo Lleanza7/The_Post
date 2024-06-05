@@ -44,7 +44,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -58,7 +58,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
                                 <div class="infoSmallCard">
                                     <div>
@@ -78,7 +78,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -92,7 +92,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -117,7 +117,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -131,7 +131,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
                                 <div class="infoSmallCard">
                                     <div>
@@ -151,7 +151,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -165,7 +165,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -209,7 +209,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -223,7 +223,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
                                 <div class="infoSmallCard">
                                     <div>
@@ -243,7 +243,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -257,7 +257,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -282,7 +282,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -296,7 +296,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
                                 <div class="infoSmallCard">
                                     <div>
@@ -316,7 +316,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -330,7 +330,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -375,7 +375,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -389,7 +389,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
                                 <div class="infoSmallCard">
                                     <div>
@@ -409,7 +409,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -423,7 +423,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -448,7 +448,7 @@
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">
@@ -462,7 +462,7 @@
                         @elseif ($key == 2)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -481,7 +481,7 @@
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                 <div class="infoSmallCard">
                                     <div>
                                         <div class="infoCardDateSmall">
@@ -495,7 +495,7 @@
                         @elseif ($key == 3)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
-                                    <img src="{{ $article->image }}" alt="">
+                                    <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
                                     <div class="divHover"></div>
                                 </div>
                                 <div class="infoCardLarge">

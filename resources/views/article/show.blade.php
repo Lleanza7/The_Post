@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
 
             <div class="col-12 col-md-8">
-                <img src="{{ Storage::url($article->image) }}" alt="" class="img-fluid my-3">
+                <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="Article Image">
                 <div class="text-center">
                     <h2>{{ $article->subtitle }}</h2>
                     <div class="my-3 text-muted fst-italic">

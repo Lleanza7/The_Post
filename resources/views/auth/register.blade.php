@@ -54,7 +54,7 @@
         </div>
         @endif
         <button class="bottomLogin" type="submit" >Registrati</button>
-        <p >Già registrato? <a href="{{route('login')}}">Clicca qui</a</a></p>
+        <p >Già registrato? <a class="loginAncor" href="{{route('login')}}">Clicca qui</a</a></p>
     </form>
     
         </div>

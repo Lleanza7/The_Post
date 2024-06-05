@@ -43,6 +43,7 @@ header {
     align-items: center;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 
 
 
@@ -859,6 +860,13 @@ a {
     border: 1px rgb(0, 0, 0) solid;
     background-color: white;
     transition: all 0.5s;
+}
+
+
+.loginAncor{
+    font-weight: 600;
+    color: rgb(58, 58, 169);
+
 }
 
 

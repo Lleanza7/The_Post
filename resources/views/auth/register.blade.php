@@ -13,6 +13,7 @@
   <main class="mainLogin">
         <div class="boxImgLogin">
             <div class="logoMobileLogin"> <x-navbar-new /></div>
+            <div class="boxGlassLogin" ><p>REGISTRATI IN TUTTA SICUREZZA PER SCOPRIRE NUOVI ANNUNCI. COMPLETA IL MODULO DI REGISTRAZIONE CON I TUOI DATI PERSONALI PER CREARE UN NUOVO ACCOUNT E ACCEDERE A TUTTE LE FUNZIONALITÀ DEL NOSTRO SITO.</p></div>
         </div>
     
     
@@ -21,6 +22,7 @@
                 <a  href="{{route('home')}}">
                     <h1> THE|POST</h1>
                 </a>
+                
             </div>
 
     

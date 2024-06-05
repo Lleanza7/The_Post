@@ -13,6 +13,7 @@
   <main class="mainLogin">
         <div class="boxImgLogin">
            <div class="logoMobileLogin"> <x-navbar-new /></div>
+           <div class="boxGlassLogin" ><p>ACCEDI AL TUO ACCOUNT IN MODO SICURO PER VISUALIZZARE E GESTIRE I TUOI ANNUNCI. INSERISCI LA TUA EMAIL E PASSWORD PER INIZIARE.</p></div>
         </div>
     
     

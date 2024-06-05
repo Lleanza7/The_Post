@@ -57,6 +57,8 @@ var TxtRotate = function(el, toRotate, period) {
   
   };
 
+  
+
 
   $(window).scroll(function(e){parallaxScroll();});
 	function parallaxScroll(){
@@ -68,8 +70,3 @@ var TxtRotate = function(el, toRotate, period) {
 		$('.y5').css({'transform': 'translate3d(0,' + scrolled * -0.5 + 'px, 0)'});
 		$('.y6').css({'transform': 'translate3d(0,' + scrolled * -0.6 + 'px, 0)'});
 	};
-
-
-
-
-

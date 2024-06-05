@@ -111,8 +111,10 @@ header h2 {
     justify-content: end;
     align-items: center;
     padding-right: 30px;
+    margin-top: 0px;
 
 }
+
 
 
 .centroNav {
@@ -168,10 +170,10 @@ header h2 {
     border: 0.5px solid rgba(255, 255, 255, 0.395);
     padding: 0px 5px;
     border-radius: 30px;
-    
+
 }
 
-.logoMobileLogin{
+.logoMobileLogin {
     display: none;
 }
 
@@ -179,13 +181,27 @@ header h2 {
     flex: 1;
     display: flex;
     align-items: center;
- 
+
 }
 
 .navItem svg {
     display: none;
 
 }
+
+.navItem:hover>svg {
+    display: block;
+}
+
+.navItem .formHoverAccount {
+    display: none;
+
+}
+
+.navItem:hover>.formHoverAccount {
+    display: block;
+}
+
 
 .navItem span {
     opacity: 1;
@@ -195,20 +211,30 @@ header h2 {
 
 
 
-.navItem:hover span {
+.navItem:hover>span {
     display: none;
 
 }
 
-.navItem:hover svg {
-    display: block;
-}
 
 
 .navItem:hover {
     background-color: rgba(255, 255, 255, 0.137);
 }
 
+.mioAccount {
+    display: block;
+}
+
+.logoutHover {
+    display: none;
+}
+
+
+
+.acountHover:hover .logoutHover {
+    display: block;
+}
 
 
 .BoxNavItem a:hover {
@@ -239,6 +265,113 @@ header h2 {
     margin-top: 0px;
 
 }
+
+.navItem span {
+    font-family: sottile;
+}
+
+#navItem {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid rgb(255, 255, 255);
+    height: 100%;
+    color: #dde1e7;
+    border-bottom: 0px solid #dde1e7;
+    border-left: 0px solid #dde1e7;
+    text-align: center;
+    font-family: sottile;
+    font-size: clamp(0.5rem, 1.8vw, 0.8rem);
+    padding: 10px 10px;
+    white-space: nowrap;
+    transition: 0.1s ease-in-out;
+    margin-top: 0px;
+    position: relative;
+
+
+
+}
+
+.handmadeDropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 49px;
+    background: rgba(0, 0, 0, 0.113);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
+    width: 100.5%;
+    border: 0.5px solid white;
+    display: none;
+    border-top: none;
+
+
+
+
+}
+
+.formHoverAccount button {
+    background-color: #ffffff00;
+    border: none;
+    color: white;
+    font-family: sottile;
+    width: 100%;
+    height: 100%;
+}
+
+
+#navItem>a {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-family: sottile;
+    white-space: nowrap;
+    color: white;
+
+}
+
+#navItem:hover {
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+#navItem:hover .handmadeDropdown {
+    display: flex;
+
+
+
+}
+
+
+
+.handmadeDropdown a {
+    font-size: clamp(0.5rem, 1.1vw, 0.7rem);
+    padding: 10px 10px;
+    margin: 0px;
+
+
+}
+
+.handmadeDropdown a:hover {
+    background-color: white;
+    color: black;
+
+}
+
+#navItem li a {
+    color: black;
+    padding: 0px 1vw;
+    border-bottom: 0.5px black solid;
+    font-size: clamp(0.5rem, 1.8vw, 0.8rem);
+    margin: 0px;
+    width: 50px;
+}
+
+#navItem li {
+    width: 50px;
+}
+
 
 .menuMobile {
     display: none;
@@ -610,13 +743,16 @@ input::placeholder {
 }
 
 .boxImgLogin {
-    background-image: url(/public/Header.jpg);
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2546a094954923.5e8bb6cfdaf86.gif);
     height: 100vh;
-    width: 40%;
+    width: 45%;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+
 }
 
 .boxForm {
@@ -624,10 +760,12 @@ input::placeholder {
     justify-content: top;
     align-items: center;
     height: 100vh;
-    width: 60%;
+    width: 55%;
     flex-direction: column;
     position: relative;
 }
+
+
 
 .logoLogin {
     width: 100%;
@@ -635,13 +773,14 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
+    padding-bottom: 15vh;
     margin-top: 40px;
 
 }
-.logoLogin a{
+
+.logoLogin a {
     color: black;
-  
+
 }
 
 .boxForm h3 {
@@ -666,6 +805,8 @@ input::placeholder {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+
 
 }
 
@@ -735,6 +876,35 @@ a {
         width: 300px;
     }
 }
+
+.social svg {
+    margin-left: 0px;
+}
+
+
+.boxGlassLogin {
+    width: 90%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    
+}
+.boxGlassLogin p{
+    width: 80%;
+font-family: sottile;
+font-size: clamp(0.7rem, 1.5vw, 1.0rem);
+text-align: center;
+
+}
+
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
@@ -841,7 +1011,17 @@ a {
 
     .boxDivImg {
         margin: 0px;
+
     }
+
+    .boxImgLogin {
+        width: 50%;
+    }
+
+    .boxForm {
+        width: 50%;
+    }
+
 
 }
 
@@ -909,43 +1089,45 @@ a {
     }
 
 
-.mainLogin{
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.boxImgLogin{
-    width: 100%;
-    height: 35vh;
-    display: flex;
-  justify-content: center;
-  align-items: start;
+    .mainLogin {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-}
-.boxImgLogin a{
-    width: 100%;
-    background-color: red;
-    text-align: center;
- 
-}
+    .boxImgLogin {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.logoMobileLogin{
-    width: 100%;
-    display: block;
-}
+    }
 
-.boxForm{
-    height: 65vh;
-}
+    .boxImgLogin a {
+        width: 100%;
+        background-color: red;
+        text-align: center;
 
-.boxForm h3{
-    margin-top: 30px;
-}
+    }
 
-.logoLogin{
-    display: none;
+    .logoMobileLogin {
+        width: 100%;
+        display: block;
+    }
 
-} 
+    .boxForm {
+        height: 60vh;
+    }
+
+    .boxForm h3 {
+        margin-top: 30px;
+    }
+
+    .logoLogin {
+        display: none;
+
+    }
 
 
     @keyframes animated-text {
@@ -968,4 +1150,12 @@ align-items: center;
         margin-bottom: 5px;
     }
 
+.boxGlassLogin{
+    height: auto;
+    padding: 30px 0px;
+    margin-top: 60px;
+width: 80%;
 }
+
+}
+

@@ -139,9 +139,12 @@ header h2 {
     margin: 10px;
     width: 30px;
     color: #dde1e7;
+    
 
 
 }
+
+
 
 .upNav {
 
@@ -182,6 +185,7 @@ header h2 {
     display: flex;
     align-items: center;
 
+
 }
 
 .navItem svg {
@@ -191,6 +195,7 @@ header h2 {
 
 .navItem:hover>svg {
     display: block;
+    
 }
 
 .navItem .formHoverAccount {
@@ -239,6 +244,7 @@ header h2 {
 
 .BoxNavItem a:hover {
     color: white;
+    
 }
 
 .BoxNavItem a {

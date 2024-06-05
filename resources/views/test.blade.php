@@ -34,7 +34,7 @@
                             politiche
                             pubbliche e molto altro.
                         </p>
-                        <button class="buttonDivImgCat">Scopri..</button>
+                        <a href="{{route('article.byCategory', ['category' => '1'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="containerCard1">
                     @foreach ($articlePolitica as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -54,9 +54,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
 
@@ -69,14 +69,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articlePolitica as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -88,9 +88,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -102,7 +102,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -115,7 +115,7 @@
                 <div class="containerCard1">
                     @foreach ($articleEconomia as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -127,9 +127,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
 
@@ -142,14 +142,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articleEconomia as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -161,9 +161,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -175,7 +175,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -185,7 +185,7 @@
                     <div class="boxDivImgGlass">
                         <h2> ECONOMIA</h2>
                         <p>Approfondisci le dinamiche economiche a livello globale e locale. Leggi analisi e aggiornamenti su mercati finanziari, politiche economiche, tendenze di mercato e come questi fattori influenzano il mondo degli affari e la vita quotidiana.</p>
-                            <button class="buttonDivImgCat">Scopri..</button>
+                            <a href="{{route('article.byCategory', ['category' => '2'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
                         <h2> FOOD&DRINK</h2>
                         <p>Immergiti nel mondo del cibo e delle bevande con ricette, recensioni di ristoranti e consigli su vini e cocktail. Scopri tendenze culinarie, esplora cucine internazionali e trova ispirazione per i tuoi pasti quotidiani e le occasioni speciali.
                         </p>
-                        <button class="buttonDivImgCat">Scopri..</button>
+                        <a href="{{route('article.byCategory', ['category' => '3'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                 <div class="containerCard1">
                     @foreach ($articleFood as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -219,9 +219,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
 
@@ -234,14 +234,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articleFood as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -253,9 +253,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -267,7 +267,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -280,7 +280,7 @@
                 <div class="containerCard1">
                     @foreach ($articleSport as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -292,9 +292,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
 
@@ -307,14 +307,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articleSport as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -326,9 +326,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -340,7 +340,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -351,7 +351,7 @@
                         <h2> SPORT</h2>
                         <p>Esplora il mondo dello sport con notizie, risultati e analisi delle tue discipline preferite. Dalle competizioni internazionali ai campionati locali, resta informato su tutto ciò che accade nel mondo dello sport.
                         </p>
-                            <button class="buttonDivImgCat">Scopri..</button>
+                            <a href="{{route('article.byCategory', ['category' => '4'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>
@@ -365,7 +365,7 @@
                         <h2 style="text-align: center">INTRATTENIMENTO</h2>
                         <p>Tuffati nel mondo dell'intrattenimento con notizie su film, serie TV, musica e spettacoli dal vivo. Resta aggiornato sulle ultime uscite, leggi recensioni, scopri gossip sulle celebrità e segui gli eventi più importanti del panorama culturale e dello spettacolo.
                         </p>
-                        <button class="buttonDivImgCat">Scopri..</button>
+                        <a href="{{route('article.byCategory', ['category' => '5'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>
@@ -373,7 +373,7 @@
                 <div class="containerCard1">
                     @foreach ($articleIntrattenimento as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -385,9 +385,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
 
@@ -400,14 +400,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articleIntrattenimento as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -419,9 +419,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -433,7 +433,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -446,7 +446,7 @@
                 <div class="containerCard1">
                     @foreach ($articleSport as $key => $article)
                         @if ($key == 0)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -458,9 +458,9 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 2)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -472,14 +472,14 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
                 <div class="containerCard2">
                     @foreach ($articleSport as $key => $article)
                         @if ($key == 1)
-                            <div class="cardHomeSmall">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ $article->image }}" alt="">
                                 <div class="infoSmallCard">
@@ -491,9 +491,9 @@
                                         <h4>{{ $article->title }}</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         @elseif ($key == 3)
-                            <div class="cardHomeLarge">
+                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
                                     <img src="{{ $article->image }}" alt="">
                                     <div class="divHover"></div>
@@ -505,7 +505,7 @@
                                     </div>
                                     <h4>{{ $article->title }}</h4>
                                 </div>
-                            </div>
+                            </a>
                         @endif
                     @endforeach
                 </div>
@@ -513,9 +513,9 @@
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
-                        <h2> Tech</h2>
+                        <h2>TECH</h2>
                         <p>Scopri le ultime innovazioni e tendenze nel mondo della tecnologia. Dalle recensioni di nuovi gadget alle novità nel settore dell'IT, resta aggiornato su tutto ciò che riguarda la tecnologia e il suo impatto sul mondo.</p>
-                            <button class="buttonDivImgCat">Scopri..</button>
+                            <a href="{{route('article.byCategory', ['category' => '6'])}}" class="buttonDivImgCat">Scopri..</a>
                     </div>
                 </div>
             </div>

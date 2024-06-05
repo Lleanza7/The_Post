@@ -6,6 +6,7 @@
 a {
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 
 
@@ -98,7 +99,7 @@ header h2 {
     position: fixed;
     top: 0;
     z-index: 34;
-    background: rgba(0, 0, 0, 0.113);
+    background: rgba(0, 0, 0, 0.194);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.7px);
     -webkit-backdrop-filter: blur(10.7px);
@@ -139,7 +140,8 @@ header h2 {
     margin: 10px;
     width: 30px;
     color: #dde1e7;
-    
+    cursor: pointer;
+
 
 
 }
@@ -159,7 +161,7 @@ header h2 {
 .upNav input {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
-    width: 60px;
+    width: 150px;
     transition: width 1s;
     margin: 0px 10px;
     color: #dde1e7;
@@ -168,13 +170,13 @@ header h2 {
 
 .upNav input:hover {
 
-    width: 150px;
+    width: 300px;
     transition: width 1s;
     border: 0.5px solid rgba(255, 255, 255, 0.395);
     padding: 0px 5px;
     border-radius: 30px;
-
 }
+
 
 .logoMobileLogin {
     display: none;
@@ -195,7 +197,7 @@ header h2 {
 
 .navItem:hover>svg {
     display: block;
-    
+
 }
 
 .navItem .formHoverAccount {
@@ -244,7 +246,7 @@ header h2 {
 
 .BoxNavItem a:hover {
     color: white;
-    
+
 }
 
 .BoxNavItem a {
@@ -901,13 +903,14 @@ a {
     align-items: center;
     position: absolute;
 
-    
+
 }
-.boxGlassLogin p{
+
+.boxGlassLogin p {
     width: 80%;
-font-family: sottile;
-font-size: clamp(0.7rem, 1.5vw, 1.0rem);
-text-align: center;
+    font-family: sottile;
+    font-size: clamp(0.7rem, 1.5vw, 1.0rem);
+    text-align: center;
 
 }
 
@@ -1156,12 +1159,11 @@ text-align: center;
         margin-bottom: 5px;
     }
 
-.boxGlassLogin{
-    height: auto;
-    padding: 30px 0px;
-    margin-top: 60px;
-width: 80%;
-}
+    .boxGlassLogin {
+        height: auto;
+        padding: 30px 0px;
+        margin-top: 60px;
+        width: 80%;
+    }
 
 }
-

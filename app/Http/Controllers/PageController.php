@@ -16,12 +16,17 @@ class PageController extends Controller
         $this->middleware('auth')->except('home', 'test');
     }
 
-/*     public function home()
+    public function home()
     {
-
-        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        return view('homepage', compact('articles'));
-    } */
+        $articlePolitica = Article::where('category_id', 1)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+        $articleEconomia = Article::where('category_id', 2)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+        $articleFood = Article::where('category_id', 3)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+        $articleSport = Article::where('category_id', 4)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+        $articleIntrattenimento = Article::where('category_id', 5)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+        $articleTech = Article::where('category_id', 6)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
+    
+        return view('homepage', compact('articlePolitica', 'articleEconomia', 'articleFood', 'articleSport', 'articleIntrattenimento', 'articleTech'));
+    }
 
     public function careers()
     {
@@ -61,17 +66,9 @@ class PageController extends Controller
     }
 
 
-    public function home()
-    {
-        $articlePolitica = Article::where('category_id', 1)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $articleEconomia = Article::where('category_id', 2)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $articleFood = Article::where('category_id', 3)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $articleSport = Article::where('category_id', 4)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $articleIntrattenimento = Article::where('category_id', 5)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $articleTech = Article::where('category_id', 6)->where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-    
-        return view('homepage', compact('articlePolitica', 'articleEconomia', 'articleFood', 'articleSport', 'articleIntrattenimento', 'articleTech'));
-    }
-    
-    
+
+    /* ROTTA TEST */
+     /* public function test(){
+        return view('test');
+    } */
 }

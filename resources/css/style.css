@@ -418,6 +418,9 @@ header h2 {
     align-items: center;
     margin: 0px 15px;
     display: flex;
+   ;
+    
+
 }
 
 .containerCard2 {
@@ -431,7 +434,7 @@ header h2 {
 
 .cardHomeLarge {
     width: 100%;
-    height: 60vh;
+    height: auto;
     margin-bottom: 30px;
     position: relative;
     background: #ffffff;
@@ -502,8 +505,10 @@ header h2 {
     position: -webkit-sticky;
     position: sticky;
     top: 100px;
-    margin-left: 15px;
-    margin-right: 15px;
+    
+    margin: 12.5px 15px;
+    margin-bottom: 0px;
+ 
 }
 
 .imgCardLarge img {
@@ -515,7 +520,7 @@ header h2 {
 }
 
 .imgCardLarge {
-    height: 420px;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,6 +537,7 @@ header h2 {
     padding: 1vw;
     align-items: start;
     margin-top: 20px;
+    height: auto;
 
 
 
@@ -544,12 +550,14 @@ header h2 {
     align-items: center;
     font-size: 13px;
     color: rgba(94, 94, 94, 0.733);
+  
 
 }
 
 .infoCardDateLarge p {
     font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: clamp(0.6rem, 1vw, 0.8rem);
+
 }
 
 .infoCardDateSmall p {
@@ -563,6 +571,7 @@ header h2 {
 
     text-align: start;
     height: 50px;
+  
 
 
 
@@ -1004,6 +1013,7 @@ a {
     .infoSmallCard,
     .infoCardLarge {
         padding: 1.5vw;
+      
     }
 
     .infoSmallCard {
@@ -1175,3 +1185,6 @@ a {
     }
 
 }
+
+
+

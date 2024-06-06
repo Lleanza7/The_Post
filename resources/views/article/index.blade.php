@@ -12,37 +12,48 @@
 <body style="   background-color: #E8ECEF;">
     <x-nav-bar-white />
     <div class="headerIndex">
-        <h2>TUTTI GLI ARTICOLI</h2>
 
-        <div class="containerFilter">
 
-          <div class="BoxSelect">
-                <div class="containerSelect"><select name="" id="">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select></div>
-                <div class="containerSelect"><select name="" id="">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select></div>
-                <div class="containerSelect"><select name="" id="">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select></div>
-          </div>
-                
-                <button>cerca</button> 
-            </div>
+       
               
         </div>
         <main class="mainAllCard">
+        
           <div class="container text-center ">
+      <div class="Boxh2Index">  
+        <div class="hoverBoxh2Index">
+            <h2 class="h2Category">Tutti gli articoli</h2>
+
+        </div>
+    </div>
+            <div style="width: 100%;display:flex;    justify-content: space-between; ">
+                <div  class="BoxSelect">
+              
+                    <div class="containerSelect"><select name="" id="">
+                            <option value="volvo">Politica</option>
+                            <option value="saab">Economia</option>
+                            <option value="mercedes">Food & Drink</option>
+                            <option value="audi">Sport</option>
+                            <option value="audi">Intrattenimento</option>
+                            <option value="audi">Tech</option>
+                        </select></div>
+                    <div class="containerSelect"><select name="" id="">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select></div>
+                    <div class="containerSelect"><select name="" id="">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select></div>
+                        <button>cerca</button> 
+              </div>
+                    
+               
+            </div>
             <div class="row ">
             
               @foreach ($articles as $article)

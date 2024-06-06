@@ -8,6 +8,7 @@
 
           <img  src="{{ Storage::exists($image) ? Storage::url($image) : asset('/default.jpg') }}"
              alt="">
+             <div class="divHoverAllCard"></div>
 
       <div class="containerDetailAllCard">
           <p>Redatto il {{ $data }} </p>

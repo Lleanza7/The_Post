@@ -997,6 +997,14 @@ a {
 
 .nav2White .handmadeDropdown {
     border: 0.5px black solid;
+   
+}
+.nav2White .handmadeDropdown a:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+} 
+.nav2White .handmadeDropdown a{
+    color: white;
 }
 
 .nav2White #navItem {
@@ -1276,6 +1284,32 @@ margin-bottom: 20px;
   align-items: center;
   color: white;
   font-family: sottile;
+}
+
+
+.divHoverAllCard {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(245, 222, 179, 0);
+    top: 0;
+    transition: border 0.5s;
+    margin-top: 20px;
+    z-index: 7;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, 9%);
+   z-index: 2333;
+
+}
+
+.divHoverAllCard:hover {
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+   
+    transition: border 0.5s;
+  
 }
 
 

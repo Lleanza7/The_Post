@@ -83,7 +83,7 @@
 
 
 
-            <a href="{{ route('careers') }}"> <span>LAVORA CON NOI</span></a>
+            <a href="{{ route('careers') }}"> LAVORA CON NOI</a>
             @auth
                 <a style="border-right: 0px solid white;">
                     <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">

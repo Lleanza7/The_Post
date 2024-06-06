@@ -198,17 +198,17 @@ header h2 {
 
 .navItem:hover>svg {
     display: block;
-    
+
 
 }
 
 .navItem .formHoverAccount {
     display: none;
-  
+
 
 }
 
-.navItem .formHoverAccount button{
+.navItem .formHoverAccount button {
     height: 100%;
     width: 100%;
     display: flex;
@@ -217,11 +217,11 @@ header h2 {
 
 .navItem:hover>.formHoverAccount {
     display: block;
-      width: 100%;
+    width: 100%;
     height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -365,6 +365,7 @@ align-items: center;
     display: flex;
 
 }
+
 #navItemMobile:hover .handmadeDropdownMobile {
     display: flex;
 
@@ -372,10 +373,13 @@ align-items: center;
 
 
 
-.handmadeDropdown a {
-    font-size: clamp(0.5rem, 1.1vw, 0.7rem);
+.handmadeDropdownMobile a {
+    font-size: clamp(0.8rem, 1.1vw, 0.7rem);
     padding: 10px 10px;
     margin: 7px 0px;
+    color: rgb(174, 174, 174);
+    height: auto;
+    
 
 
 }
@@ -1335,7 +1339,7 @@ a {
 }
 
 .containerMobileNav {
- 
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -1345,20 +1349,22 @@ a {
 
 }
 
-.containerMobileNav a{
+.containerMobileNav a {
     color: white;
     font-family: sottile;
- width: auto;
- margin: 7px 0px;
+    width: auto;
+    margin: 7px 0px;
+    font-size: clamp(0.8rem, 1.1vw, 0.7rem);
 }
 
-.containerMobileNav a:hover{
-   color: grey;
+.containerMobileNav a:hover {
+    color: rgb(141, 141, 141);
 
 }
 
 
-#navItemMobile{
+
+#navItemMobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1367,17 +1373,14 @@ a {
     text-align: center;
     font-size: clamp(0.9rem, 1.8vw, 0.8rem);
     padding: 10px 10px;
-border: none;
-    height:auto;
+    border: none;
+    height: auto;
     flex-direction: column;
+    margin: 7px 0px;
 }
 
 
-#navItemMobile:hover .handmadeDropdownMobile {
-    display: flex;
 
-
-}
 
 
 #navItemMobile li a {
@@ -1387,7 +1390,7 @@ border: none;
     font-size: clamp(0.5rem, 1.8vw, 0.8rem);
     margin: 0px;
     width: 50px;
-   
+
 }
 
 #navItemMobile li {
@@ -1399,7 +1402,7 @@ border: none;
 
 
 
-.handmadeDropdownMobile{
+.handmadeDropdownMobile {
     display: flex;
     flex-direction: column;
     top: 49px;

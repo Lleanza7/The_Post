@@ -63,11 +63,11 @@
             <a href="{{ route('article.index') }}"><span>ARTICOLI</span></a>
             @auth
                 <div style="width: auto;margin:0px" id="navItemMobile">
-                    <span>  DASHBOARD  </span>
+                    <span> DASHBOARD </span>
                     <div class="handmadeDropdownMobile">
                         @auth
                             @if (Auth::user()->is_admin)
-                                <a  href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                                <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
                             @endif
                             @if (Auth::user()->is_revisor)
                                 <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
@@ -91,7 +91,7 @@
                         <button type="submit"><span>{{ Auth::user()->name }}: LOGOUT</span>
                         </button>
                     </form>
-                   
+
 
                 </a>
             @endauth

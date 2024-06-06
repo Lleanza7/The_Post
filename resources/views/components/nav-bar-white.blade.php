@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <div class="navMobile" >
-  
+    <div class="navMobile">
+
         <nav style="position: relative" class="nav2">
             <a class="logo" href="{{ route('home') }}">
                 <h1> THE|POST</h1>
             </a>
-    
+
             <div class="centroNav">
                 <div class="upNav">
                     <div onclick="NohideNavMobile()" class="menuMobile">
@@ -38,19 +38,18 @@
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                             </svg>
-    
+
                             <input type="search" aria-label="Search" placeholder="Cerca un articolo" name="query">
                         </div>
                 </div>
                 </form>
-    
-                
+
+
             </div>
-    
-           
-    
-        </nav>
-        <div class="containerMobileNav" >
+
+
+
+        </nav> <div class="containerMobileNav">
 
 
 
@@ -66,40 +65,50 @@
 
 
             <a href="{{ route('article.index') }}"><span>ARTICOLI</span></a>
-
-            
             @auth
-            <div style="width: 100%;" id="navItemMobile">
-               
-                <span>
-                    DASHBOARD
-                </span>
-                <div  class="handmadeDropdown">
-                    @auth
-                        @if (Auth::user()->is_admin)
-                            <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
-                        @endif
-                        @if (Auth::user()->is_revisor)
-                            <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
-                        @endif
-                        @if (Auth::user()->is_writer)
-                            <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
-                            <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                        @endif
-                    @endauth
+                <div style="width: auto;margin:0px" id="navItemMobile">
+                    <span> DASHBOARD </span>
+                    <div class="handmadeDropdownMobile">
+                        @auth
+                            @if (Auth::user()->is_admin)
+                                <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                            @endif
+                            @if (Auth::user()->is_revisor)
+                                <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
+                            @endif
+                            @if (Auth::user()->is_writer)
+                                <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                                <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
+                            @endif
+                        @endauth
+                    </div>
                 </div>
-            </div>
-        @endauth
+            @endauth
 
 
 
+            <a href="{{ route('careers') }}"> <span>LAVORA CON NOI</span></a>
+            @auth
+                <a style="border-right: 0px solid white;">
+                    <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
+                        @csrf
+                        <button type="submit"><span>{{ Auth::user()->name }}: LOGOUT</span>
+                        </button>
+                    </form>
 
+
+                </a>
+            @endauth
+            @guest
+                <a style="border-right: 0px solid white;" href="{{ route('login') }}">
+                    <span>ACCEDI</span></a>
+            @endguest
 
 
 
 
         </div>
- 
+
     </div>
     <nav class="nav2White">
         <a class="logo" href="{{ route('home') }}">
@@ -132,8 +141,8 @@
                         <input type="search" aria-label="Search" placeholder="Cerca un articolo" name="query">
                     </div>
                 </form>
-                </div>
-          
+            </div>
+
 
             <div class="BoxNavItem">
 
@@ -147,10 +156,13 @@
                     </svg><span>ARTICOLI</span></a>
                 @auth
                     <div class="navItem" id="navItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
-                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
-                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path
+                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                            <path
+                                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                        </svg>
                         <span>
                             DASHBOARD
                         </span>
@@ -171,8 +183,9 @@
                     </div>
                 @endauth
 
-                <a class="navItem" href="{{ route('careers') }}"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                        height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                <a class="navItem" href="{{ route('careers') }}"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" fill="currentColor" class="bi bi-briefcase-fill"
+                        viewBox="0 0 16 16">
                         <path
                             d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5" />
                         <path
@@ -181,12 +194,11 @@
                     <span>LAVORA CON NOI</span></a>
                 @auth
                     <a href="{{ route('logout') }}" style="border-right: 0px solid white;" class="navItem">
-                        <form  class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
+                        <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
                             @csrf
-                            <button  type="submit">
-                                <svg style="display: block" xmlns="http://www.w3.org/2000/svg"
-                                    width="20" height="20" fill="currentColor" class="bi bi-door-open-fill"
-                                    viewBox="0 0 16 16">
+                            <button type="submit">
+                                <svg style="display: block" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
                                 </svg>
@@ -243,16 +255,15 @@
 
     <script>
         function hideNavMobile() {
-       var navMobile = document.querySelector('.navMobile');
-       navMobile.style.display = 'block';
-     }
-   
-     function NohideNavMobile() {
-       var navMobile = document.querySelector('.navMobile');
-       navMobile.style.display = 'none';
-     }
-   
-   </script>
+            var navMobile = document.querySelector('.navMobile');
+            navMobile.style.display = 'block';
+        }
+
+        function NohideNavMobile() {
+            var navMobile = document.querySelector('.navMobile');
+            navMobile.style.display = 'none';
+        }
+    </script>
 
 </body>
 

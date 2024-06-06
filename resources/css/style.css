@@ -198,16 +198,32 @@ header h2 {
 
 .navItem:hover>svg {
     display: block;
+    
 
 }
 
 .navItem .formHoverAccount {
     display: none;
+  
 
+}
+
+.navItem .formHoverAccount button{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .navItem:hover>.formHoverAccount {
     display: block;
+      width: 100%;
+    height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
 }
 
 
@@ -348,7 +364,9 @@ header h2 {
 #navItem:hover .handmadeDropdown {
     display: flex;
 
-
+}
+#navItemMobile:hover .handmadeDropdownMobile {
+    display: flex;
 
 }
 
@@ -357,7 +375,7 @@ header h2 {
 .handmadeDropdown a {
     font-size: clamp(0.5rem, 1.1vw, 0.7rem);
     padding: 10px 10px;
-    margin: 0px;
+    margin: 7px 0px;
 
 
 }
@@ -594,8 +612,8 @@ header h2 {
     font-weight: bold;
 }
 
-.divHover {  
-      height: 85%;
+.divHover {
+    height: 85%;
     width: 95%;
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0);
@@ -999,13 +1017,15 @@ a {
 
 .nav2White .handmadeDropdown {
     border: 0.5px black solid;
-   
+
 }
-.nav2White .handmadeDropdown a:hover{
+
+.nav2White .handmadeDropdown a:hover {
     background-color: rgb(255, 255, 255);
     color: #000000;
-} 
-.nav2White .handmadeDropdown a{
+}
+
+.nav2White .handmadeDropdown a {
     color: white;
 }
 
@@ -1062,7 +1082,7 @@ a {
     background-color: #E8ECEF;
     margin: 0px;
     margin-right: 15px;
- 
+
 
 
 }
@@ -1090,13 +1110,13 @@ a {
 
 .containerAllCard {
 
-  
+
     position: relative;
 
     height: 50vh;
     width: 100%;
 
-   
+
 }
 
 
@@ -1191,7 +1211,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-  
+
 
 }
 
@@ -1211,23 +1231,23 @@ a {
 
 
 
-.escMenuMobile{
+.escMenuMobile {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.headerIndexCategory{
+.headerIndexCategory {
     height: 5vh;
 }
 
-.h2Category{
-font-size: clamp(2.5rem, 7vw, 4rem);
+.h2Category {
+    font-size: clamp(2.5rem, 7vw, 4rem);
 
 
 }
 
-.boxh2Category{
+.boxh2Category {
     width: 100%;
     display: flex;
     justify-content: start;
@@ -1239,7 +1259,7 @@ font-size: clamp(2.5rem, 7vw, 4rem);
     position: relative;
 }
 
-.hoverBoxh2Category{
+.hoverBoxh2Category {
     width: 90%;
     height: 70%;
     position: absolute;
@@ -1247,30 +1267,30 @@ font-size: clamp(2.5rem, 7vw, 4rem);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.1px);
     -webkit-backdrop-filter: blur(10.1px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: sottile;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sottile;
 }
 
-.Boxh2Index{
+.Boxh2Index {
     width: 100%;
     height: 20vh;
     background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2546a094954923.5e8bb6cfdaf86.gif);
     background-attachment: fixed;
-   display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-margin-bottom: 20px;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
 }
 
-.hoverBoxh2Index{
+.hoverBoxh2Index {
     width: 90%;
     height: 70%;
     position: absolute;
@@ -1278,14 +1298,14 @@ margin-bottom: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.1px);
     -webkit-backdrop-filter: blur(10.1px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: sottile;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sottile;
 }
 
 
@@ -1309,9 +1329,85 @@ margin-bottom: 20px;
 .divHoverAllCard:hover {
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
-   
+
     transition: border 0.5s;
-  
+
+}
+
+.containerMobileNav {
+ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.containerMobileNav a{
+    color: white;
+    font-family: sottile;
+ width: auto;
+ margin: 7px 0px;
+}
+
+.containerMobileNav a:hover{
+   color: grey;
+
+}
+
+
+#navItemMobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(0.9rem, 1.8vw, 0.8rem);
+    padding: 10px 10px;
+border: none;
+    height:auto;
+    flex-direction: column;
+}
+
+
+#navItemMobile:hover .handmadeDropdownMobile {
+    display: flex;
+
+
+}
+
+
+#navItemMobile li a {
+    color: black;
+    padding: 0px 1vw;
+    border: none;
+    font-size: clamp(0.5rem, 1.8vw, 0.8rem);
+    margin: 0px;
+    width: 50px;
+   
+}
+
+#navItemMobile li {
+    width: 50px;
+}
+
+
+
+
+
+
+.handmadeDropdownMobile{
+    display: flex;
+    flex-direction: column;
+    top: 49px;
+    width: 100%;
+    display: none;
+    border-top: none;
+    transition: all 0.5s;
+
 }
 
 
@@ -1438,7 +1534,7 @@ margin-bottom: 20px;
         flex-direction: column;
     }
 
-    
+
 
 }
 
@@ -1456,12 +1552,13 @@ margin-bottom: 20px;
         border: none;
         height: 75px;
     }
-.nav2White{
-    border: none;
-    height: 75px;
 
-}
-   
+    .nav2White {
+        border: none;
+        height: 75px;
+
+    }
+
 
     .menuMobile {
         display: block;
@@ -1621,25 +1718,26 @@ margin-bottom: 20px;
 
     }
 
-    .BoxSelect{
+    .BoxSelect {
         flex-direction: column;
-       }
-    
+    }
 
-       .BoxSelect button {
+
+    .BoxSelect button {
         width: 100%;
-       }
+    }
 
-       .containerSelect select {
+    .containerSelect select {
         width: 100%;
         margin: 0px;
-       }
+    }
 
 
 
-       .headerIndex,.headerIndexCategory {
+    .headerIndex,
+    .headerIndexCategory {
         height: 1vh;
-       }  
+    }
 
 
 }

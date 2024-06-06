@@ -50,7 +50,55 @@
            
     
         </nav>
-        <div style="background-color: blue;width:100%;height: 50px"></div>
+        <div class="containerMobileNav" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <a href="{{ route('article.index') }}"><span>ARTICOLI</span></a>
+
+            
+            @auth
+            <div style="width: 100%;" id="navItemMobile">
+               
+                <span>
+                    DASHBOARD
+                </span>
+                <div  class="handmadeDropdown">
+                    @auth
+                        @if (Auth::user()->is_admin)
+                            <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                        @endif
+                        @if (Auth::user()->is_revisor)
+                            <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
+                        @endif
+                        @if (Auth::user()->is_writer)
+                            <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                            <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
+                        @endif
+                    @endauth
+                </div>
+            </div>
+        @endauth
+
+
+
+
+
+
+
+
+        </div>
  
     </div>
     <nav class="nav2White">
@@ -132,15 +180,17 @@
                     </svg>
                     <span>LAVORA CON NOI</span></a>
                 @auth
-                    <a style="border-right: 0px solid white;" class="navItem">
-                        <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
+                    <a href="{{ route('logout') }}" style="border-right: 0px solid white;" class="navItem">
+                        <form  class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
                             @csrf
-                            <button type="submit"><svg style="display: block" xmlns="http://www.w3.org/2000/svg"
+                            <button  type="submit">
+                                <svg style="display: block" xmlns="http://www.w3.org/2000/svg"
                                     width="20" height="20" fill="currentColor" class="bi bi-door-open-fill"
                                     viewBox="0 0 16 16">
                                     <path
                                         d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
-                                </svg></button>
+                                </svg>
+                            </button>
                         </form>
                         <span>{{ Auth::user()->name }}: LOGOUT</span>
 

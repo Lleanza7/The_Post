@@ -1212,7 +1212,7 @@ a {
 }
 
 .h2Category{
-font-size: clamp(4rem, 3vw, 3rem);
+font-size: clamp(2.5rem, 7vw, 4rem);
 
 
 }

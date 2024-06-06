@@ -53,7 +53,7 @@
         <div style="background-color: blue;width:100%;height: 50px"></div>
  
     </div>
-    <nav class="nav2">
+    <nav class="nav2White">
         <a class="logo" href="{{ route('home') }}">
             <h1> THE|POST</h1>
         </a>
@@ -75,7 +75,7 @@
                 <form class="search" method="GET" action="{{ route('article.search') }}">
                     <div style="display: flex;align-items: center;">
                         @csrf
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
                             <path
                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -83,8 +83,9 @@
 
                         <input type="search" aria-label="Search" placeholder="Cerca un articolo" name="query">
                     </div>
-            </div>
-            </form>
+                </form>
+                </div>
+          
 
             <div class="BoxNavItem">
 
@@ -98,8 +99,9 @@
                     </svg><span>ARTICOLI</span></a>
                 @auth
                     <div class="navItem" id="navItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
                           </svg>
                         <span>
                             DASHBOARD
@@ -189,18 +191,18 @@
 
     </nav>
 
-<script>
-     function hideNavMobile() {
-    var navMobile = document.querySelector('.navMobile');
-    navMobile.style.display = 'block';
-  }
-
-  function NohideNavMobile() {
-    var navMobile = document.querySelector('.navMobile');
-    navMobile.style.display = 'none';
-  }
-
-</script>
+    <script>
+        function hideNavMobile() {
+       var navMobile = document.querySelector('.navMobile');
+       navMobile.style.display = 'block';
+     }
+   
+     function NohideNavMobile() {
+       var navMobile = document.querySelector('.navMobile');
+       navMobile.style.display = 'none';
+     }
+   
+   </script>
 
 </body>
 

@@ -56,7 +56,8 @@
                                 </div>
                             </a>
                         @elseif ($key == 2)
-                            <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
+                           
+                        <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>
                                 <img src="{{ Storage::exists($article->image) ? Storage::url($article->image) : asset('/default.jpg') }}" alt="">
 
@@ -70,6 +71,7 @@
                                     </div>
                                 </div>
                             </a>
+                            
                         @endif
                     @endforeach
                 </div>

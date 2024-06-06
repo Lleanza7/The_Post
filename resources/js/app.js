@@ -57,7 +57,7 @@ var TxtRotate = function(el, toRotate, period) {
   
   };
 
-  
+ 
 
 
   $(window).scroll(function(e){parallaxScroll();});

@@ -25,6 +25,7 @@ class ArticleFactory extends Factory
             'image' => $defaultImagePath,
             'user_id' => rand(1,10),
             'slug' => $this->faker->slug(),
+            'is_accepted' => true,
             
         ];
     }

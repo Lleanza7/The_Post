@@ -33,6 +33,8 @@ Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('
 Route::get('/careers', [PageController::class, 'careers'])->name('careers');
 Route::post('careers/submit', [PageController::class, 'careerSubmit'])->name('careers.submit');
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+//FILTRO VISTA INDEX
+Route::post('/article/index/filter', [ArticleController::class, 'indexFilter'])->name('article.indexFilter');
 
 
 //GRUPPO ROTTE ADMIN

@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-
+<x-layout>
   <main class="mainLogin">
         <div class="boxImgLogin">
            <div class="logoMobileLogin"> <x-navbar-new /></div>
-           <div class="boxGlassLogin" ><p>ACCEDI AL TUO ACCOUNT IN MODO SICURO PER VISUALIZZARE E GESTIRE I TUOI ANNUNCI. INSERISCI LA TUA EMAIL E PASSWORD PER INIZIARE.</p></div>
+           <div class="boxGlassLogin" ><p>ACCEDI AL TUO ACCOUNT IN MODO SICURO PER VISUALIZZARE E GESTIRE I TUOI ANNUNCI INSERISCI LA TUA EMAIL E PASSWORD PER INIZIARE.</p></div>
         </div>
     
     
@@ -32,18 +21,14 @@
             <label for="email" class="form-label"></label>
             <input placeholder="Inserisci la tua email" name="email" type="email" class="form-control" id="email"value="{{old('email')}}">
         </div>
-        
         <div >
             <label for="password" class="form-label"></label>
             <input name="password" type="password" class="form-control" id="Inserisci la tua password" placeholder="Password" >
         </div>
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-            <li>{{$error}}</li>
-            @endforeach
-        </div>
-        @endif
+        @error('email')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
         <button class="bottomLogin" type="submit" >Accedi</button>
         <p >Non sei ancora registrato? <a class="loginAncor" href="{{route('register')}}">Clicca qui</a></p>
     </form>
@@ -52,6 +37,4 @@
   </main>
 
 
-</body>
-
-</html>
+</x-layout>

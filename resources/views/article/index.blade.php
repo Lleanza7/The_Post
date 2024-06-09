@@ -1,40 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
 
-<body style="   background-color: #E8ECEF;">
     <x-nav-bar-white />
     <div class="headerIndex">
-
-
-
-
     </div>
     <main class="mainAllCard">
-
         <div class="container text-center ">
             <div class="Boxh2Index">
                 <div class="hoverBoxh2Index">
                     <h2 class="h2Category">Tutti gli articoli</h2>
-
                 </div>
             </div>
             <div style="width: 100%;display:flex;justify-content: space-between;">
-                <form class="BoxSelect" action="{{route('article.indexFilter')}}" method="POST">
+                <form class="BoxSelect" action="{{ route('article.indexFilter') }}" method="POST">
                     @csrf
                     {{-- ordina per categoria --}}
                     <div class="containerSelect">
                         <select name="byCategory" id="">
                             <option value="">Filtra per categoria</option>
-                            @foreach ($categories as $category) 
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" @if (isset($byCategory) && $byCategory == $category->id) selected @endif>
+                                    {{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -42,27 +28,30 @@
                     <div class="containerSelect">
                         <select name="byDate" id="">
                             <option value="">Ordina per</option>
-                            <option value="desc">Più recente</option>
-                            <option value="asc">Meno recente</option>
-                            <option value="readTime">Tempo di lettura</option>
+                            <option value="desc" @if (isset($byDate) && $byDate == 'desc') selected @endif>Più recente
+                            </option>
+                            <option value="asc" @if (isset($byDate) && $byDate == 'asc') selected @endif>Meno recente
+                            </option>
+                            <option value="readTime" @if (isset($byDate) && $byDate == 'readTime') selected @endif>Tempo di lettura
+                            </option>
                         </select>
                     </div>
                     {{-- tempo di lettura --}}
                     <div class="containerSelect">
                         <select name="byReadTime" id="">
                             <option value="">Tempo di lettura</option>
-                            <option value="less_equal_5">5 minuti o inferiore</option>
-                            <option value="between_5_10"> 5 -10 minuti</option>
-                            <option value="greater_equal_10">10 minuti o più</option>
+                            <option value="less_equal_5" @if (isset($byReadTime) && $byReadTime == 'less_equal_5') selected @endif>5 minuti o
+                                inferiore</option>
+                            <option value="between_5_10" @if (isset($byReadTime) && $byReadTime == 'between_5_10') selected @endif> 5 -10 minuti
+                            </option>
+                            <option value="greater_equal_10" @if (isset($byReadTime) && $byReadTime == 'greater_equal_10') selected @endif>10 minuti
+                                o più</option>
                         </select>
                     </div>
                     <button>cerca</button>
                 </form>
-
-
             </div>
             <div class="row ">
-
                 @foreach ($articles as $article)
                     @if ($article->category_id)
                         @php
@@ -84,16 +73,8 @@
                             readDuration="{{ $article->readDuration() }}" />
                     </div>
                 @endforeach
-
-
-
-
             </div>
         </div>
-
     </main>
 
-
-</body>
-
-</html>
+</x-layout>

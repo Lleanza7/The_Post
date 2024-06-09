@@ -58,16 +58,16 @@ class ArticleController extends Controller
     
                 if ($selezionaPerTempoLettura == 'less_equal_5' && $timeToReadArticle <= 5) {
                     return true;
-                } elseif ($selezionaPerTempoLettura == 'less_equal_10' && $timeToReadArticle <= 10) {
+                } elseif ($selezionaPerTempoLettura == 'between_5_10' && $timeToReadArticle < 10 && $timeToReadArticle > 5) {
                     return true;
-                } elseif ($selezionaPerTempoLettura == 'less_equal_15' && $timeToReadArticle <= 15) {
+                } elseif ($selezionaPerTempoLettura == 'less_equal_15' && $timeToReadArticle < 15 && $timeToReadArticle > 10) {
                     return true;
                 }
     
                 return false;
             });
         }
-        return view('article.index', compact('articles'));
+        return view('article.index', compact('articles'))->with($request->input());
     }
 
 

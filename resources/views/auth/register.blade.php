@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-
+<x-layout>
   <main class="mainLogin">
         <div class="boxImgLogin">
             <div class="logoMobileLogin"> <x-navbar-new /></div>
@@ -33,10 +22,16 @@
             <label for="username"  ></label>
             <input  name="name" type="text" class="form-control" id="username" value="{{old('name')}}" placeholder="Inserisci username">
         </div>
+        @error('name')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
         <div>
             <label for="email" ></label>
             <input placeholder="Inserisci la tua email" name="email" type="email" class="form-control" id="email"value="{{old('email')}}">
         </div>
+        @error('email')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
         <div >
             <label for="password"></label>
             <input placeholder="Inserisci la tua password" name="password" type="password" class="form-control" id="password">
@@ -46,13 +41,10 @@
             <input placeholder="Conferma la tua password" name="password_confirmation" type="password" class="form-control"
                 id="password_confirmation">
         </div>
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-            <li>{{$error}}</li>
-            @endforeach
-        </div>
-        @endif
+        @error('password')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+        
         <button class="bottomLogin" type="submit" >Registrati</button>
         <p >Già registrato? <a class="loginAncor" href="{{route('login')}}">Clicca qui</a</a></p>
     </form>
@@ -61,6 +53,4 @@
   </main>
 
 
-</body>
-
-</html>
+</x-layout>

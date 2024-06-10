@@ -13,7 +13,7 @@
     </header>
     <main>
         {{-- blocco di codice 1 POLITICA --}}
-        <div style="background-color: #E8ECEF;" class="test">
+        <div style="background-color: #f7f7f7;" class="test">
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
@@ -182,7 +182,7 @@
         </div>
 
         {{-- blocco di codice 3 Food&Drink --}}
-        <div style="background-color: #E8ECEF;" class="test">
+        <div style="background-color: #f7f7f7;" class="test">
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">
@@ -348,7 +348,7 @@
         </div>
 
         {{-- blocco di codice 5 INTRATTENIMENTO --}}
-        <div style="background-color: #E8ECEF;" class="test">
+        <div style="background-color: #f7f7f7;" class="test">
             <div class="boxDivImg">
                 <div class="divImg">
                     <div class="boxDivImgGlass">

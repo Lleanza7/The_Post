@@ -379,7 +379,7 @@ header h2 {
     margin: 7px 0px;
     color: rgb(174, 174, 174);
     height: auto;
-    
+
 
 
 }
@@ -423,7 +423,7 @@ header h2 {
 
 
 .test {
-    background: #f2f4f7;
+    background: white;
     height: auto;
     display: flex;
     align-items: start;
@@ -564,6 +564,7 @@ header h2 {
 
 
 
+
 }
 
 .infoCardDateLarge {
@@ -572,6 +573,7 @@ header h2 {
     align-items: center;
     font-size: 13px;
     color: rgba(94, 94, 94, 0.733);
+
 
 
 }
@@ -614,20 +616,20 @@ header h2 {
     padding-right: 30px;
     font-family: 'Cardo', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
+    z-index: 2;
 }
 
 .divHover {
-    height: 85%;
+    height: 98%;
     width: 95%;
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0);
     background-color: rgba(245, 222, 179, 0);
     top: 0;
-    transition: border 0.5s;
-    z-index: 7;
+
     top: auto;
     left: 50%;
-    transform: translate(-50%, 3%);
+    transform: translate(-50%, 9.5%);
 
 }
 
@@ -635,7 +637,8 @@ header h2 {
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
     margin-top: 20px;
-    transition: border 0.5s;
+
+
 }
 
 
@@ -705,6 +708,7 @@ footer {
     width: 100%;
     background-color: #000000;
     height: 300px;
+    margin-top: 90px;
 
 
 
@@ -782,6 +786,7 @@ input::placeholder {
 
 .mainLogin {
     display: flex;
+
 }
 
 .boxImgLogin {
@@ -878,7 +883,6 @@ a {
     border-radius: 30px;
     margin-top: 30px;
     transition: all 0.5s;
-
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.7px);
     -webkit-backdrop-filter: blur(10.7px);
@@ -1141,13 +1145,16 @@ a {
     width: 80%;
     position: absolute;
     bottom: 0;
-
     padding: 20px;
     height: auto;
     padding-bottom: 5px;
     top: auto;
     left: 50%;
     transform: translate(-50%, 0%);
+    background: #ffffff;
+    box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 
 }
 
@@ -1190,6 +1197,7 @@ a {
     height: auto;
     padding: 0px 30px;
     margin-top: 100px;
+
 
 
 }
@@ -1291,6 +1299,7 @@ a {
     align-items: center;
     position: relative;
     margin-bottom: 20px;
+
 
 }
 
@@ -1398,10 +1407,6 @@ a {
 }
 
 
-
-
-
-
 .handmadeDropdownMobile {
     display: flex;
     flex-direction: column;
@@ -1411,12 +1416,69 @@ a {
     border-top: none;
     transition: all 0.5s;
 
+
 }
 
 
+.containerArticleCreate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+.boxPreviewArticleCreate {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 25px
+}
+
+.boxPreviewArticleCreate div img {
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+.bottomFormCreateArticle {
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0px 15px;
+    border: 0.5px solid black;
+    transition: background-color 0.5s;
+    margin: 10px 0px;
+}
+
+.bottomFormCreateArticle:hover {
+    border: 0.5px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s;
+}
+
+
+.formCreateArticle {
+    height: 80vh;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.containerFormCreateArticle {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    height: auto
+}
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
+
+
 
     .logo {
         display: none;
@@ -1547,6 +1609,28 @@ a {
 
 /*Mobile*/
 @media screen and (max-width: 700px) {
+
+
+    .containerArticleCreate {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerFormCreateArticle{
+        width: 100%;
+    }
+
+    .boxPreviewArticleCreate {
+        width: 100%;
+  
+    }
+
+    .formCreateArticle{
+        height: auto;
+    }
+
+
+
     .BoxNavItem {
         display: none;
     }

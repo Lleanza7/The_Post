@@ -33,25 +33,21 @@
                 @endif
 
                 <div class="container my-5">
-                    <div class="row justify-content-center">
-                      @foreach ($articles as $article)
-                            @php
-                                $colClass = 'col-lg-4';
-                                if ($loop->count > 3) {
-                                    $colClass = 'col-lg-6';
-                                }
-                            @endphp
-                            <div class="col-12 col-md-6 {{ $colClass }} col-ml-4 col-sm-12 p-2">
-                                <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}"
-                                    image="{{ $article->image }}" category="{{ $article->category->name }}"
-                                    data="{{ $article->created_at->format('d/m/Y') }}"
-                                    url="{{ route('article.show', compact('article')) }}"
-                                    user="{{ $article->user->name }}"
-                                    urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                    urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
-                                    :tags="$article->tags" readDuration="{{ $article->readDuration() }}" />
-                            </div>
-                        @endforeach
+                    <div  style="background-color:white;" class="row p-3">
+                  @foreach ($articles as $article)
+                     
+                          <div  class="col-12 col-md-6 col-lg-4 col-ml-4 col-sm-12 p-2">
+                              <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}"
+                                  image="{{ $article->image }}" category="{{ $article->category->name }}"
+                                  data="{{ $article->created_at->format('d/m/Y') }}"
+                                  url="{{ route('article.show', compact('article')) }}"
+                                  user="{{ $article->user->name }}"
+                                  urlCategory="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
+                                  urlUser="{{ route('article.byUser', ['user' => $article->user->id]) }}"
+                                  :tags="$article->tags" readDuration="{{ $article->readDuration() }}" />
+                          </div>
+                      @endforeach
+                      
                         
                     </div>
                 </div>
@@ -62,7 +58,7 @@
 
     </main>
 
-
+    <x-footer />
 </body>
 
 </html>

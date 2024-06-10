@@ -16,17 +16,18 @@
           <h5>{{ $subtitle }}</h5>
          <div class="containerTagAllCard"> 
           @if ($category)
-          
-          <p><a href="{{ $urlCategory }}">{{ $category }}</a>&nbsp; - &nbsp;</p> 
+          <p><a href="{{ $urlCategory }}">{{ $category }}</a>&nbsp;|&nbsp;</p> 
           @else
           <p>Non categorizzato</p>
           @endif
-          @if($tags)
-          <p>@foreach ($tags as $tag){{ $tag->name }}
-          @endforeach
-      </p>
-      @endif
-      <p><a href="{{ $urlUser }}"> &nbsp; - &nbsp; {{ $user }}</p>
+
+        @if($tags->count() > 0)
+              <p>@foreach ($tags as $tag){{ $tag->name }}&nbsp;@if(!$loop->last)-@endif @endforeach</p>
+          @else
+              <p>Tag non presenti</p>
+          @endif
+          
+      <p><a href="{{ $urlUser }}">&nbsp;| {{ $user }}</p>
         </div>
       </div>
       

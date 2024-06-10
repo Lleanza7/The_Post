@@ -61,7 +61,7 @@
 
 
             </div>
-            <div class="row ">
+            <div  style="background-color:white;" class="row p-3">
 
                 @foreach ($articles as $article)
                     @if ($article->category_id)
@@ -75,7 +75,7 @@
                             $varUrlCategory = '#';
                         @endphp
                     @endif
-                    <div class="col-12 col-md-6 col-lg-4 col-ml-4 col-sm-12 p-2">
+                    <div  class="col-12 col-md-6 col-lg-4 col-ml-4 col-sm-12 p-2">
                         <x-card title="{{ $article->title }}" subtitle="{{ $article->subtitle }}"
                             image="{{ $article->image }}" category="{{ $varCategory }}"
                             urlCategory="{{ $varUrlCategory }}" data="{{ $article->created_at->format('d/m/Y') }}"
@@ -93,7 +93,7 @@
 
     </main>
 
-
+    <x-footer />
 </body>
 
 </html>

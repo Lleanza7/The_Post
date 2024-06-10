@@ -13,7 +13,7 @@
 
         <nav style="position: relative" class="nav2">
             <a class="logo" href="{{ route('home') }}">
-                <h1> THE|POST</h1>
+                <h1>THE|NEWS</h1>
             </a>
 
             <div class="centroNav">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="logoMobile">
                         <a style="color: white" href="{{ route('home') }}">
-                            <h1> THE|POST</h1>
+                            <h1>THE|NEWS</h1>
                         </a>
                     </div>
                     <form class="search" method="GET" action="{{ route('article.search') }}">
@@ -112,7 +112,7 @@
     </div>
     <nav class="nav2White">
         <a class="logo" href="{{ route('home') }}">
-            <h1> THE|POST</h1>
+            <h1>THE|NEWS</h1>
         </a>
 
         <div class="centroNav">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="logoMobile">
                     <a style="color: white" href="{{ route('home') }}">
-                        <h1> THE|POST</h1>
+                        <h1>THE|NEWS</h1>
                     </a>
                 </div>
                 <form class="search" method="GET" action="{{ route('article.search') }}">

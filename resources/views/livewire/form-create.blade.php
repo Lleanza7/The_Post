@@ -4,7 +4,7 @@
                     <div class="containerAllCard ">
                         @if (empty($image))
                             <div aria-hidden="true" style="height: 100%">
-                                <div class="card-text placeholder-glow skeleton centro-skeletron" style="height: 100%">
+                                <div class="card-text placeholder-glow skeleton centro-skeletron" style="height: 95%">
                                     <span class="placeholder col-12 "
                                         style="height: 100%; width: 100%;cursor:default;"></span>
                                 </div>

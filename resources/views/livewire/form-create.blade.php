@@ -3,10 +3,10 @@
                 <div class="boxPreviewArticleCreate">
                     <div class="containerAllCard ">
                         @if (empty($image))
-                            <div aria-hidden="true">
-                                <div class="card-text placeholder-glow skeleton centro-skeletron">
+                            <div aria-hidden="true" style="height: 100%">
+                                <div class="card-text placeholder-glow skeleton centro-skeletron" style="height: 100%">
                                     <span class="placeholder col-12 "
-                                        style="height: 59vh; width: 100%;cursor:default;"></span>
+                                        style="height: 100%; width: 100%;cursor:default;"></span>
                                 </div>
                             </div>
                         @else

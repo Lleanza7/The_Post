@@ -542,8 +542,8 @@ header h2 {
 }
 
 .imgCardLarge {
-    
-   height: 45vh;
+
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1121,7 +1121,7 @@ a {
 
 
     position: relative;
-height: 59vh;
+    height: 555px;
     width: 100%;
 
 
@@ -1475,56 +1475,58 @@ height: 59vh;
     height: auto
 }
 
-.mainShow{
+.mainShow {
     margin-top: 120px;
     position: relative;
     display: flex;
     padding: 50px;
-   
+
 }
 
-.imageShow{
-height: 100vh;
-width: 60%;
-background-size: cover;
-background-position: top;
-box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
+.imageShow {
+    height: 100vh;
+    width: 60%;
+    background-size: cover;
+    background-position: top;
+    box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
     transition: box-shadow 11s ease-in-out;
     transition: opacity 0.3s ease-in-out;
 
 }
 
-.detailShow{
-background-color: rgb(255, 255, 255);
-height: auto;
-width: 48%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-2%, -50%);
-display: flex;
-flex-direction: column;
-align-items: start;
-padding: 50px;
-justify-content: start;
-padding-bottom: 100px;
-box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
+.detailShow {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 48%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-2%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px;
+    justify-content: start;
+    padding-bottom: 100px;
+    box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
     transition: box-shadow 11s ease-in-out;
     transition: opacity 0.3s ease-in-out;
 }
 
-.detailShow h2{
+.detailShow h2 {
     font-size: clamp(1.6rem, 3vw, 6rem);
     font-family: sottile;
     margin: 0px;
 }
-.detailShow  p{
+
+.detailShow p {
     font-family: sottile;
     font-size: clamp(0.6rem, 1vw, 2rem);
-  
+
 
 }
-.detailShow .bodyShow{
+
+.detailShow .bodyShow {
     overflow-y: scroll;
     min-height: 50px;
     max-height: 180px;
@@ -1533,15 +1535,16 @@ box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
 
 
 
-.detailShow h5{
+.detailShow h5 {
     font-size: clamp(0.5rem, 1vw, 0.7rem);
     font-family: sottile;
     color: rgba(0, 0, 0, 0.455);
-margin-bottom: 30px;
-margin-top: 1px;
-  
+    margin-bottom: 30px;
+    margin-top: 1px;
+
 }
-.detailShow h4{
+
+.detailShow h4 {
     margin: 0px;
     font-size: clamp(0.9rem, 1vw, 0.7rem);
 }
@@ -1590,7 +1593,7 @@ margin-top: 1px;
 
 .bottomTornaAcetta:hover {
     border: 0.5px solid#2E7D32;
-    background-color:#2E7D32;
+    background-color: #2E7D32;
     color: rgb(255, 255, 255);
     transition: background-color 0.5s;
 }
@@ -1614,7 +1617,7 @@ margin-top: 1px;
 
 .bottomTornaRifiuta:hover {
     border: 0.5px solid #C62828;
-    background-color:#C62828;
+    background-color: #C62828;
     color: rgb(255, 255, 255);
     transition: background-color 0.5s;
 }
@@ -1624,7 +1627,7 @@ margin-top: 1px;
 
 
 
-.containerFormAcceptReject{
+.containerFormAcceptReject {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1632,7 +1635,7 @@ margin-top: 1px;
     margin-top: 50px;
 }
 
-.contaionerWorkDescription{
+.contaionerWorkDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1640,16 +1643,18 @@ margin-top: 1px;
 
 }
 
-.formCareers input, #role, #message{
+.formCareers input,
+#role,
+#message {
     border-radius: 0px;
 }
 
-.formCareers{
-padding-right: 20px;
-width: 100%;
+.formCareers {
+    padding-right: 20px;
+    width: 100%;
 }
 
-.workDescription{
+.workDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1660,14 +1665,15 @@ width: 100%;
     font-family: sottile;
 }
 
-.workDescription h2{
+.workDescription h2 {
     background-color: black;
     color: white;
     padding: 10px 30px;
     padding-left: 5px;
     font-size: clamp(1rem, 1.7vw, 2.2rem);
 }
-.workDescription p{
+
+.workDescription p {
     font-size: clamp(0.8rem, 0.9vw, 1.8rem);
     overflow-y: scroll;
     height: 8vh;
@@ -1687,21 +1693,21 @@ width: 100%;
 .containerFormWork {
     width: 45%;
     background-color: white;
-   display: flex;
-   justify-content: center;
-   align-items: start;
-   height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: auto;
 }
 
-.containerDashboard{
-background-color: white;
+.containerDashboard {
+    background-color: white;
     width: auto;
     height: 80vh;
     display: flex;
     flex-direction: column;
 }
 
-.containerListDashboard{
+.containerListDashboard {
 
     height: 10%;
     width: 100%;
@@ -1710,63 +1716,64 @@ background-color: white;
     justify-content: space-around;
     cursor: pointer;
     border-bottom: 0.5px solid black;
-   
+
 
 }
-.containerListDashboard h6{
-margin: 0px;
-   height: 100%;
+
+.containerListDashboard h6 {
+    margin: 0px;
+    height: 100%;
     width: 100%;
     text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: sottile;
- 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sottile;
+
 }
 
-.containerListDashboard h6:hover{
-background-color: black;
-color: white;
+.containerListDashboard h6:hover {
+    background-color: black;
+    color: white;
 }
 
-.containerSettingAdmin{
+.containerSettingAdmin {
     background-color: yellow;
     height: 100%;
-    width:100%;
-    
+    width: 100%;
 
-    
+
+
 }
 
-.containerSettingRevisor{
+.containerSettingRevisor {
     background-color: rgb(0, 255, 26);
     height: 100%;
-    width:100%;
+    width: 100%;
     display: none;
 }
 
-.containerSettingRedator{
+.containerSettingRedator {
     background-color: rgb(234, 0, 255);
     height: 100%;
-    width:100%;
+    width: 100%;
     display: none;
 }
 
 
 
-  
 
- 
+
+
 
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
 
-.imageShow{
-    height: 70vh;
-}
-    
+    .imageShow {
+        height: 70vh;
+    }
+
 
 
 
@@ -1900,61 +1907,62 @@ color: white;
 /*Mobile*/
 @media screen and (max-width: 700px) {
 
-    .boxWorkDescription{
+    .boxWorkDescription {
         padding-bottom: 0px;
     }
 
-    .formCareers{
+    .formCareers {
         padding: 0px;
     }
 
-.boxWorkDescription{
-width: 100%;
-}
+    .boxWorkDescription {
+        width: 100%;
+    }
 
-.containerFormWork{
-    width: 100%;
-}
+    .containerFormWork {
+        width: 100%;
+    }
 
-.formCareers{
-    padding: 20px;
-}
-
-
+    .formCareers {
+        padding: 20px;
+    }
 
 
-   .imageShow{
-    width: 100%;
-   }
 
-   .detailShow{
-    width: 90%;
-    top: 50%;
-left: 50%;
-transform: translate(-50%, 0%);
-padding: 30px;
-padding-bottom: 10px;
-   }
 
-   .containerFormAcceptReject{
-    margin-top: 0px;
-   }
+    .imageShow {
+        width: 100%;
+    }
 
-   .bottomTornaIndietro{
-    margin-top: 0px;
-   }
+    .detailShow {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        padding: 30px;
+        padding-bottom: 10px;
+    }
 
-   .detailShow .bodyShow{
-    height: 70px;
-   }
+    .containerFormAcceptReject {
+        margin-top: 0px;
+    }
 
-   .bottomTornaIndietro{
-    padding: 0px 15px;
+    .bottomTornaIndietro {
+        margin-top: 0px;
+    }
 
-   }
-   .mainShow{
-    padding: 0px;
-   }
+    .detailShow .bodyShow {
+        height: 70px;
+    }
+
+    .bottomTornaIndietro {
+        padding: 0px 15px;
+
+    }
+
+    .mainShow {
+        padding: 0px;
+    }
 
 
     .containerArticleCreate {
@@ -1962,16 +1970,16 @@ padding-bottom: 10px;
         height: auto;
     }
 
-    .containerFormCreateArticle{
+    .containerFormCreateArticle {
         width: 100%;
     }
 
     .boxPreviewArticleCreate {
         width: 100%;
-  
+
     }
 
-    .formCreateArticle{
+    .formCreateArticle {
         height: auto;
     }
 
@@ -2052,7 +2060,7 @@ padding-bottom: 10px;
         align-items: center;
     }
 
-    .mailShow{
+    .mailShow {
         width: 100%;
         height: auto;
         padding: 0px 30px;

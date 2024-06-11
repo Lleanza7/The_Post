@@ -29,8 +29,8 @@
             <div class="containerArticleCreate">
 
                 <div class="boxPreviewArticleCreate" >
-                    <div style="height: 100%;" class="containerAllCard ">
-                        <img  src="https://www.global-engineering-technologies.com/wp-content/uploads/2017/05/placeholder-image.png"
+                    <div  class="containerAllCard ">
+                        <img style="object-position: top" src="https://www.global-engineering-technologies.com/wp-content/uploads/2017/05/placeholder-image.png"
                             alt="">
 
 

@@ -1,65 +1,105 @@
-<x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
-        <div class="row justify-content-center">
-            <h1 class="display-1">
-                Lavora con noi
-            </h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body style="   background-color: #E8ECEF;">
+    <x-nav-bar-white />
+    <div class="headerIndex">
+
+
+
+
     </div>
-    <div class="container my-5">
-        <div class="row justify-content-center align-items-center border rounded p-2 shadow">
-            <div class="col-12 col-md-6">
-                <h2>Lavora come amministratore</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates mollitia dicta
-                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum vero libero at?
-                    Quasi animi consectetur ducimus.</p>
-                <h2>Lavora come revisore</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates mollitia dicta
-                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum vero libero at?
-                    Quasi animi consectetur ducimus.</p>
-                <h2>Lavora come redattore</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates mollitia dicta
-                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum vero libero at?
-                    Quasi animi consectetur ducimus.</p>
+    <main class="mainAllCard">
+
+        <div class="container text-center ">
+            <div class="Boxh2Index">
+                <div class="hoverBoxh2Index">
+                    <h2 class="h2Category">Lavora con noi</h2>
+
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+            <div style="height: auto" class="containerArticleCreate">
+
+                <div class="boxWorkDescription">
+                    <div style="height: auto;" class="contaionerWorkDescription ">
+
+                        <div class="workDescription">
+                            <h2>Lavora come amministratore</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                mollitia dicta
+                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                vero libero at?
+                                Quasi animi consectetur ducimus.</p>
+                        </div>
+                        <div class="workDescription">
+                            <h2>Lavora come revisore</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                mollitia dicta
+                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                vero libero at?
+                                Quasi animi consectetur ducimus.</p>
+                        </div>
+                        <div class="workDescription">
+                            <h2>Lavora come redattore</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                mollitia dicta
+                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                vero libero at?
+                                Quasi animi consectetur ducimus.</p>
+                        </div>
+
                     </div>
-                @endif
-                <form action="{{route('careers.submit')}}" method="POST" class="p-5">
+                </div>
+                <div class="containerFormWork">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form class="formCareers" action="{{ route('careers.submit') }}" method="POST" ">
                     @csrf
-                    <div class="mb-3">
-                        <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
+            
+                        <label for="role" class="form-label"></label>
                         <select name="role" id="role" class="form-control">
-                            <option value="">Scegli una posizione</option>
+                            <option value="">Scegli la posizione richiesta</option>
                             <option value="admin">Amministratore</option>
                             <option value="revisor">Revisore</option>
                             <option value="writer">Redattore</option>
                         </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email">Inserisci la tua email</label>
-                        <input type="email" name="email" id="email" class="form-control"
+          
+               
+                        <label for="email"></label>
+                        <input  placeholder="Inserisci la tua email" type="email" name="email" id="email" class="form-control"
                             value="{{ old('email') ?? Auth::user()->email }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message">Parlaci di te</label>
-                        <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
-                    </div>
-                    <div class="mt-2">
-                        <button class="btn btn-info text-white">Invia la tua candidatura</button>
-                    </div>
+                
+              
+                        <label for="message"></label>
+                        <textarea placeholder="Parlaci di te" name="message" id="message" cols="30" rows="7" class="form-control">{{ old('message') }}</textarea>
+              
+             
+                        <button style="margin-top: 40px" class="bottomFormCreateArticle">Invia la tua candidatura</button>
+                   
                 </form>
+                </div>
+
             </div>
         </div>
-    </div>
 
+    </main>
 
+    <x-footer />
+</body>
 
-</x-layout>
+</html>

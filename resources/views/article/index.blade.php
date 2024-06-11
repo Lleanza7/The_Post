@@ -51,7 +51,7 @@
                     <button>cerca</button>
                 </form>
             </div>
-            <div class="row ">
+            <div style="background-color:white;" class="row ">
                 @foreach ($articles as $article)
                     @if ($article->category_id)
                         @php

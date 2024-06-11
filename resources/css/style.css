@@ -542,7 +542,8 @@ header h2 {
 }
 
 .imgCardLarge {
-    height: 60vh;
+    
+   height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1120,9 +1121,9 @@ a {
 
 
     position: relative;
-
-    height: 50vh;
+height: 59vh;
     width: 100%;
+
 
 
 }
@@ -1435,11 +1436,7 @@ a {
     padding-bottom: 25px
 }
 
-.boxPreviewArticleCreate div img {
-    object-fit: cover;
-    object-position: center;
 
-}
 
 
 .bottomFormCreateArticle {
@@ -1475,8 +1472,232 @@ a {
     height: auto
 }
 
+.mainShow{
+    margin-top: 120px;
+    position: relative;
+    display: flex;
+    padding: 50px;
+   
+}
+
+.imageShow{
+height: 100vh;
+width: 60%;
+background-size: cover;
+background-position: top;
+box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.detailShow{
+background-color: rgb(255, 255, 255);
+height: auto;
+width: 48%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-2%, -50%);
+display: flex;
+flex-direction: column;
+align-items: start;
+padding: 50px;
+justify-content: start;
+padding-bottom: 100px;
+box-shadow: -5px -5px 9px rgba(0, 0, 0, 0), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    transition: box-shadow 11s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.detailShow h2{
+    font-size: clamp(1.6rem, 3vw, 6rem);
+    font-family: sottile;
+    margin: 0px;
+}
+.detailShow  p{
+    font-family: sottile;
+    font-size: clamp(0.6rem, 1vw, 2rem);
+  
+
+}
+.detailShow .bodyShow{
+    overflow-y: scroll;
+    min-height: 50px;
+    max-height: 180px;
+    font-size: clamp(0.8rem, 1vw, 2rem);
+}
+
+
+
+.detailShow h5{
+    font-size: clamp(0.5rem, 1vw, 0.7rem);
+    font-family: sottile;
+    color: rgba(0, 0, 0, 0.455);
+margin-bottom: 30px;
+margin-top: 1px;
+  
+}
+.detailShow h4{
+    margin: 0px;
+    font-size: clamp(0.9rem, 1vw, 0.7rem);
+}
+
+.bottomTornaIndietro {
+    height: 50px;
+    width: auto;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0px 15px;
+    border: 0.5px solid black;
+    transition: background-color 0.5s;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+}
+
+.bottomTornaIndietro:hover {
+    border: 0.5px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s;
+}
+
+
+
+.bottomTornaAcetta {
+    height: 50px;
+    width: auto;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0px 15px;
+    border: 0.5px solid black;
+    transition: background-color 0.5s;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.bottomTornaAcetta:hover {
+    border: 0.5px solid#2E7D32;
+    background-color:#2E7D32;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s;
+}
+
+
+.bottomTornaRifiuta {
+    height: 50px;
+    width: auto;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0px 15px;
+    border: 0.5px solid black;
+    transition: background-color 0.5s;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.bottomTornaRifiuta:hover {
+    border: 0.5px solid #C62828;
+    background-color:#C62828;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s;
+}
+
+
+
+
+
+
+.containerFormAcceptReject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contaionerWorkDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.formCareers input, #role, #message{
+    border-radius: 0px;
+}
+
+.formCareers{
+padding-right: 20px;
+width: 100%;
+}
+
+.workDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    text-align: start;
+    font-family: sottile;
+}
+
+.workDescription h2{
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    padding-left: 5px;
+    font-size: clamp(1rem, 1.7vw, 2.2rem);
+}
+.workDescription p{
+    font-size: clamp(0.8rem, 0.9vw, 1.8rem);
+    overflow-y: scroll;
+    height: 8vh;
+}
+
+.boxWorkDescription {
+    width: 55%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+
+}
+
+
+
+
+.containerFormWork {
+    width: 45%;
+    background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   height: auto;
+}
+
+
 /*Tablet*/
 @media screen and (max-width: 1124px) {
+
+.imageShow{
+    height: 70vh;
+}
+    
 
 
 
@@ -1610,6 +1831,62 @@ a {
 /*Mobile*/
 @media screen and (max-width: 700px) {
 
+    .boxWorkDescription{
+        padding-bottom: 0px;
+    }
+
+    .formCareers{
+        padding: 0px;
+    }
+
+.boxWorkDescription{
+width: 100%;
+}
+
+.containerFormWork{
+    width: 100%;
+}
+
+.formCareers{
+    padding: 20px;
+}
+
+
+
+
+   .imageShow{
+    width: 100%;
+   }
+
+   .detailShow{
+    width: 90%;
+    top: 50%;
+left: 50%;
+transform: translate(-50%, 0%);
+padding: 30px;
+padding-bottom: 10px;
+   }
+
+   .containerFormAcceptReject{
+    margin-top: 0px;
+   }
+
+   .bottomTornaIndietro{
+    margin-top: 0px;
+   }
+
+   .detailShow .bodyShow{
+    height: 70px;
+   }
+
+   .bottomTornaIndietro{
+    padding: 0px 15px;
+
+   }
+   .mainShow{
+    padding: 0px;
+   }
+
 
     .containerArticleCreate {
         flex-direction: column;
@@ -1704,6 +1981,13 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .mailShow{
+        width: 100%;
+        height: auto;
+        padding: 0px 30px;
+        margin-top: 100px;
     }
 
     .boxImgLogin {

@@ -51,19 +51,6 @@
 
         </nav> <div class="containerMobileNav">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             <a href="{{ route('article.index') }}"><span>ARTICOLI</span></a>
             @auth
                 <div style="width: auto;margin:0px" id="navItemMobile">
@@ -92,7 +79,8 @@
                 <a style="border-right: 0px solid white;">
                     <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
                         @csrf
-                        <button type="submit"><span>{{ Auth::user()->name }}: LOGOUT</span>
+                        <button type="submit"><span>BENTORNATO <strong style="color: rgba(255, 255, 255, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
+
                         </button>
                     </form>
 
@@ -204,7 +192,8 @@
                                 </svg>
                             </button>
                         </form>
-                        <span>{{ Auth::user()->name }}: LOGOUT</span>
+                        <span>BENTORNATO <strong style="color: rgba(0, 0, 0, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
+
 
                     </a>
                 @endauth

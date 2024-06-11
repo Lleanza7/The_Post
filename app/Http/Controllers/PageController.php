@@ -72,4 +72,11 @@ class PageController extends Controller
     {
         return view('test');
     }
+
+    /* test create livewire */
+
+    public function testLivewire()
+    {
+        return view('testLivewire');
+    }
 }

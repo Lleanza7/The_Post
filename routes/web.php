@@ -71,5 +71,6 @@ Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'
 
 
 //rotta test
-
 Route::get('/test', [PageController::class, 'test'])->name('test');
+// test create livewire
+Route::get('/test/livewire', [PageController::class, 'testLivewire'])->name('test.livewire');

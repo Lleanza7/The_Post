@@ -1208,15 +1208,18 @@ height: 59vh;
     width: 100%;
     justify-content: start;
     align-items: center;
-
-
-
+    height: 30px;
 }
+
+.containerTagAllCard span {
+    width: 30px;
+    margin-right: 3px;
+}
+
+
 
 .containerTagAllCard p {
     margin: 0px;
-
-
 }
 
 .BoxSelect {

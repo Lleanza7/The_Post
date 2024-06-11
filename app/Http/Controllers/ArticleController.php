@@ -99,10 +99,8 @@ class ArticleController extends Controller
         return view('article.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    // SOSTITUITA CON LIVEWIRE
+    /* public function store(Request $request)
     {
         $request->validate([
             'title' => 'required|unique:articles|min:5',
@@ -136,11 +134,9 @@ class ArticleController extends Controller
         }
 
         return redirect(route('home'))->with('message', 'Articolo creato correttamente');
-    }
+    } */
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Article $article)
     {
         return view('article.show', compact('article'));

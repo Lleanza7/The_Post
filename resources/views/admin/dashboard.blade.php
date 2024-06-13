@@ -1,11 +1,42 @@
-<x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
-        <div class="row justify-content-center">
-            <h1 class="display-1">
-                Bentornato, amministratore
-            </h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body style="   background-color: #E8ECEF;">
+    <x-nav-bar-white />
+    <div class="headerIndex">
+
+
+
+
     </div>
+    <main class="mainAllCard">
+
+        <div class="container text-center ">
+            <div class="Boxh2Index">
+                <div class="hoverBoxh2Index">
+                    <h2 class="h2Category">Dashboard</h2>
+
+                </div>
+            </div>
+    <div class="containerDashboard">
+      <div class="containerListDashboard">
+        <h6 id="adminH6Dashboard"  onclick="admin()">Amministratore</h6>
+        <a  href="{{ route('revisor.dashboard') }}">
+            <h6 style=" border-left: 0.5px solid black;
+        border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
+           <a href="{{ route('writer.dashboard') }}"> <h6 onclick="redatore()">Redattore</h6></a>
+        </a>
+      </div>
+      <div class="containerSettingAdmin">
+        <!-- Contenuto per l'amministratore -->
 
     @if (session('message'))
         <div class="alert alert-success text-center">
@@ -39,12 +70,7 @@
             <x-requests-table :roleRequest="$writerRequests" role="redattore" />
         </div>
     </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">I tags della piattaforma</div>
-            <x-metainfo-table :metaInfos="$tags" metaType="tags" />
-        </div>
-    </div>
+    
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">Le categorie della piattaforma</div>
@@ -57,6 +83,17 @@
         </div>
     </div>
 
+      </div>
+     
+    </div>
+  
+        </div>
 
+    </main>
 
-</x-layout>
+    <x-footer />
+   
+</body>
+
+</html>
+

@@ -28,7 +28,7 @@
             </div>
     <div class="containerDashboard">
       <div class="containerListDashboard">
-        <h6 onclick="admin()">Amministratore</h6>
+        <h6  onclick="admin()">Amministratore</h6>
         <h6 style=" border-left: 0.5px solid black;
     border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
         <h6 onclick="redatore()">Redattore</h6>

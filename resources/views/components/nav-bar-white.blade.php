@@ -56,17 +56,25 @@
                 <div style="width: auto;margin:0px" id="navItemMobile">
                     <span> DASHBOARD </span>
                     <div class="handmadeDropdownMobile">
+                      
                         @auth
-                            @if (Auth::user()->is_admin)
-                                <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
-                            @endif
-                            @if (Auth::user()->is_revisor)
-                                <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
-                            @endif
-                            @if (Auth::user()->is_writer)
-                                <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                        @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
+
+                                <a href="
+
+
+@auth
+    @if (Auth::user()->is_admin)
+        {{ route('admin.dashboard') }}
+    @elseif (Auth::user()->is_revisor)
+        {{ route('revisor.dashboard') }}
+    @elseif (Auth::user()->is_writer)
+        {{ route('writer.dashboard') }}
+    @endif
+@endauth   
+">DASHBOARD</a>
+@endauth
                                 <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                            @endif
                         @endauth
                     </div>
                 </div>
@@ -156,16 +164,23 @@
                         </span>
                         <div class="handmadeDropdown">
                             @auth
-                                @if (Auth::user()->is_admin)
-                                    <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
-                                @endif
-                                @if (Auth::user()->is_revisor)
-                                    <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
-                                @endif
-                                @if (Auth::user()->is_writer)
-                                    <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                            @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
+
+                                    <a href="
+
+
+@auth
+        @if (Auth::user()->is_admin)
+            {{ route('admin.dashboard') }}
+        @elseif (Auth::user()->is_revisor)
+            {{ route('revisor.dashboard') }}
+        @elseif (Auth::user()->is_writer)
+            {{ route('writer.dashboard') }}
+        @endif
+    @endauth   
+">DASHBOARD</a>
+@endauth
                                     <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                                @endif
                             @endauth
                         </div>
                     </div>

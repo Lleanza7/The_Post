@@ -1,11 +1,11 @@
 <table class="table table-striped table-hover border">
-    <thead class="table-dark">
-        <tr>
+    <thead  >
+        <tr >
             <th scope="col">#</th>
-            <th scope="col">Tag</th>
-            <th scope="col">Quantità articoli collegati</th>
-            <th scope="col">Aggiorna</th>
-            <th scope="col">Cancella</th>
+            <th scope="col ">Categoria</th>
+            <th scope="col ">Quantità articoli collegati</th>
+            <th scope="col ">Aggiorna</th>
+            <th scope="col ">Cancella</th>
         </tr>
     </thead>
     <tbody>

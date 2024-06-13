@@ -28,13 +28,23 @@
             </div>
     <div class="containerDashboard">
       <div class="containerListDashboard">
+        @auth
+        @if (Auth::user()->is_admin)
         <h6 id="adminH6Dashboard"  onclick="admin()">Amministratore</h6>
+        @endif
+        @if (Auth::user()->is_revisor)
         <a  href="{{ route('revisor.dashboard') }}">
-            <h6 style=" border-left: 0.5px solid black;
+            <h6  style=" border-left: 0.5px solid black;
         border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
-           <a href="{{ route('writer.dashboard') }}"> <h6 onclick="redatore()">Redattore</h6></a>
-        </a>
+          </a>
+        @endif
+        @if (Auth::user()->is_writer)
+           <a  href="{{ route('writer.dashboard') }}"> <h6 onclick="redatore()">Redattore</h6></a>
+      
+        @endif
+        @endauth
       </div>
+    
       <div class="containerSettingAdmin">
         <!-- Contenuto per l'amministratore -->
 
@@ -52,28 +62,31 @@
             </ul>
         </div>
     @endif
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Richieste per ruolo amministratore</div>
+    
+
+    <h6 class="categorieDashboardH6">RICHIESTE</h6>
+        <div>
+            
+            <h6 class="richiesteDashboardH6" >Amministratore</h6>
             <x-requests-table :roleRequest="$adminRequests" role="amministratore" />
+            
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Richieste per ruolo revisore</div>
-            <x-requests-table :roleRequest="$revisorRequests" role="revisore" />
+   
+   
+        <div>
+            <h6 class="richiesteDashboardH6" >Revisore</h6>
+            <x-requests-table  :roleRequest="$revisorRequests" role="revisore" />
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Richieste per ruolo redattore</div>
+   
+        <div>
+            <h6 class="richiesteDashboardH6" >Redattore</h6>
             <x-requests-table :roleRequest="$writerRequests" role="redattore" />
         </div>
-    </div>
+   
     
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Le categorie della piattaforma</div>
+    <div >
+        <div>
+            <h6 class="categorieDashboardH6">CATEGORIE</h6>
             <x-metainfo-table :metaInfos="$categories" metaType="categories" />
             <form action="{{route('admin.storeCategory')}}" class="d-flex" method="POST">
                 @csrf
@@ -92,7 +105,6 @@
     </main>
 
     <x-footer />
-   
 </body>
 
 </html>

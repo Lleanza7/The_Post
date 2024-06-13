@@ -28,12 +28,26 @@
             </div>
     <div class="containerDashboard">
       <div class="containerListDashboard">
+
+        @auth
+        @if (Auth::user()->is_admin)
        <a href="{{ route('admin.dashboard') }}"> <h6  onclick="admin()">Amministratore</h6></a>
+       @endif
+       @if (Auth::user()->is_revisor)
+
     <a href="{{ route('revisor.dashboard') }}">
             <h6 style="  border-left: 0.5px solid black;
         border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
     </a>
+
+    @endif
+    @if (Auth::user()->is_writer)
+
         <h6 id="redatorH6Dashboard" onclick="redatore()">Redattore</h6>
+
+        @endif
+                        @endauth
+
       </div>
   
  

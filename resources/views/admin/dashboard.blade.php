@@ -84,17 +84,17 @@
         </div>
    
     
-    <div >
+  
         <div>
             <h6 class="categorieDashboardH6">CATEGORIE</h6>
             <x-metainfo-table :metaInfos="$categories" metaType="categories" />
-            <form action="{{route('admin.storeCategory')}}" class="d-flex" method="POST">
+            <form style="padding: 0px 15px 30px 15px" action="{{route('admin.storeCategory')}}" class="d-flex" method="POST">
                 @csrf
-                <input type="text" name="name" class="form-control me-2" placeholder="Inserisci una nuova categoria">
-                <button type="submit" class="btn btn-success text-white">Aggiungi</button>
+                <input style="border-radius:0px" type="text" name="name" class="form-control me-2" placeholder="Inserisci una nuova categoria">
+                <button  type="submit" class="attivaBottone">Aggiungi</button>
             </form>
         </div>
-    </div>
+
 
       </div>
      

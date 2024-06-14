@@ -153,7 +153,7 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Article $article)
+/*     public function update(Request $request, Article $article)
     {
         $request->validate([
             'title' => 'required|min:5|unique:articles,title,' . $article->id,
@@ -195,7 +195,7 @@ class ArticleController extends Controller
         $article->tags()->sync($newTags);
 
         return redirect(route('writer.dashboard'))->with('message', 'Hai aggiornato correttamente l\'articolo scelto');
-    }
+    } */
 
 
     /**

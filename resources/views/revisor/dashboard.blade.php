@@ -50,30 +50,22 @@
         {{session('message')}}
     </div>
     @endif
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli da revisionare</div>
-            <x-articles-table 
-            :articles="$unrevisonedArticles" 
-            />
+
+        <div>
+            <h6  class="categorieDashboardH6">ARTICOLI DA REVISIONARE</h6>
+            <x-articles-table    :articles="$unrevisonedArticles"   />
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli pubblicati</div>
-            <x-articles-table 
-            :articles="$acceptedArticles" 
-            />
+ 
+        <div>
+            <h6 style="margin: 0px" class="categorieDashboardH6">ARTICOLI PUBLICATI</h6>
+            <x-articles-table  :articles="$acceptedArticles"   />
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli respinti</div>
-            <x-articles-table 
-            :articles="$rejectedArticles" 
-            />
+  
+        <div >
+            <h6 style="margin: 0px" class="categorieDashboardH6">ARTICOLI RESPINTI</h6>
+            <x-articles-table  :articles="$rejectedArticles"  />
         </div>
-    </div>
+
 
       </div>
     

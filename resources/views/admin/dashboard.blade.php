@@ -86,7 +86,7 @@
     
   
         <div>
-            <h6 class="categorieDashboardH6">CATEGORIE</h6>
+            <h6 style="margin: 0px" class="categorieDashboardH6">CATEGORIE</h6>
             <x-metainfo-table :metaInfos="$categories" metaType="categories" />
             <form style="padding: 0px 15px 30px 15px" action="{{route('admin.storeCategory')}}" class="d-flex" method="POST">
                 @csrf

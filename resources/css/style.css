@@ -1841,7 +1841,7 @@ a {
 
 .attivaBottone,
 .aggiornaBottone,
-.eliminaBottone {
+.eliminaBottone, .revisioneBottone{
     border: none;
     padding: 10px 20%;
     width: auto;
@@ -1857,6 +1857,19 @@ a {
 
 }
 
+.revisioneBottone{
+    padding: 10px 20%;
+}
+
+
+.revisioneBottone:hover{
+color: white;
+background-color: #20a4e1;
+border-radius: 20px;
+transition: all 1s;
+
+}
+
 .attivaBottone{
     margin: 7px 0px;
 }
@@ -1869,17 +1882,18 @@ a {
 .attivaBottone:hover {
     color: white;
     background-color: #2E7D32;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: all 1s;
 
 
 }
 
 
+
 .aggiornaBottone:hover {
     color: white;
     background-color: #ECBD00;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: all 1s;
 
 
@@ -1890,7 +1904,7 @@ a {
 .eliminaBottone:hover {
     color: white;
     background-color: #C62828;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: all 1s;
 }
 
@@ -2369,14 +2383,14 @@ a {
 .spanIconAggiorna{
     display: block;
     color: #ECBD00;
-    padding: 5px;
+    padding: 10px;
     
 }
 
 .spanIconElimina{
     display: block;
     color: #C62828;
-    padding: 5px;
+    padding: 10px;
     
 
 }
@@ -2386,14 +2400,14 @@ a {
 .spanIconAggiorna:hover{
 background-color: rgba(255, 255, 255, 0);
 color: white;
-padding: 5px;
+padding: 10px;
     
 }
 
 .spanIconElimina:hover{
     background-color: rgba(255, 255, 255, 0);
     color: white;
-    padding: 5px;
+    padding: 10px;
 }
 
 
@@ -2401,6 +2415,10 @@ padding: 5px;
     background-color: rgba(255, 255, 255, 0);
     padding: 0px;
 
+}
+
+.revisioneBottone{
+    padding: 10px 5px;
 }
 
 

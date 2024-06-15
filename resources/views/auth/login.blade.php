@@ -1,18 +1,21 @@
 <x-layout>
+    
   <main class="mainLogin">
+    
         <div class="boxImgLogin">
            <div class="logoMobileLogin"> <x-navbar-new /></div>
            <div class="boxGlassLogin" ><p>ACCEDI AL TUO ACCOUNT IN MODO SICURO PER VISUALIZZARE E GESTIRE I TUOI ANNUNCI INSERISCI LA TUA EMAIL E PASSWORD PER INIZIARE.</p></div>
         </div>
     
-    
+     
         <div class="boxForm">
             <div class="logoLogin">
                 <a  href="{{route('home')}}">
                     <h1> THE|POST</h1>
                 </a>
             </div>
-    
+           
+          
     <h3>Accedi</h3>
 
     <form  action="{{route('login')}}" method="POST">
@@ -35,6 +38,8 @@
     
         </div>
   </main>
+
+
 
 
 </x-layout>

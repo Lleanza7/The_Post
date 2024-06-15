@@ -58,30 +58,28 @@
         {{session('message')}}
     </div>
     @endif
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli in fase di revisione</div>
+  
+        <div>
+            <h6  class="categorieDashboardH6">ARTICOLI DA REVISIONARE</h6>
             <x-writer-articles-table
             :articles="$unrevisionedArticles" 
             />
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli pubblicati</div>
+
+        <div >
+            <h6 style="margin: 0px" class="categorieDashboardH6">ARTICOLI PUBBLICATI</h6>
             <x-writer-articles-table 
             :articles="$acceptedArticles" 
             />
         </div>
-    </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">Articoli respinti</div>
+
+        <div >
+            <h6 style="margin: 0px" class="categorieDashboardH6">ARTICOLI RESPINTI</h6>
             <x-writer-articles-table  
             :articles="$rejectedArticles" 
             />
         </div>
-    </div>
+
 
       </div>
     </div>

@@ -30,6 +30,10 @@ class PageController extends Controller
 
     public function careers()
     {
+        if (Auth::user()->is_admin && Auth::user()->is_revisor && Auth::user()->is_writer) {
+            return redirect()->route('home')->with('message', 'Sei già stato assunto per tutte le posizioni attive!');
+        }
+
         return view('careers');
     }
 

@@ -30,32 +30,36 @@
 
                 <div class="boxWorkDescription">
                     <div style="height: auto;" class="contaionerWorkDescription ">
-
-                        <div class="workDescription">
-                            <h2>Lavora come amministratore</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
-                                mollitia dicta
-                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
-                                vero libero at?
-                                Quasi animi consectetur ducimus.</p>
-                        </div>
-                        <div class="workDescription">
-                            <h2>Lavora come revisore</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
-                                mollitia dicta
-                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
-                                vero libero at?
-                                Quasi animi consectetur ducimus.</p>
-                        </div>
-                        <div class="workDescription">
-                            <h2>Lavora come redattore</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
-                                mollitia dicta
-                                suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
-                                vero libero at?
-                                Quasi animi consectetur ducimus.</p>
-                        </div>
-
+                        @if (!Auth::user()->is_admin)
+                            <div class="workDescription">
+                                <h2>Lavora come amministratore</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                    mollitia dicta
+                                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                    vero libero at?
+                                    Quasi animi consectetur ducimus.</p>
+                            </div>
+                        @endif
+                        @if (!Auth::user()->is_revisor)
+                            <div class="workDescription">
+                                <h2>Lavora come revisore</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                    mollitia dicta
+                                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                    vero libero at?
+                                    Quasi animi consectetur ducimus.</p>
+                            </div>
+                        @endif
+                        @if (!Auth::user()->is_writer)
+                            <div class="workDescription">
+                                <h2>Lavora come redattore</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, assumenda voluptates
+                                    mollitia dicta
+                                    suscipit sapiente minus architecto dolor alias quisquam quibusdam, facere voluptatum
+                                    vero libero at?
+                                    Quasi animi consectetur ducimus.</p>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="containerFormWork">
@@ -74,9 +78,15 @@
                         <label for="role" class="form-label"></label>
                         <select name="role" id="role" class="form-control">
                             <option value="">Scegli la posizione richiesta</option>
+                            @if(!Auth::user()->is_admin)
                             <option value="admin">Amministratore</option>
+                            @endif
+                            @if(!Auth::user()->is_revisor)
                             <option value="revisor">Revisore</option>
+                            @endif
+                            @if(!Auth::user()->is_writer)
                             <option value="writer">Redattore</option>
+                            @endif
                         </select>
           
                

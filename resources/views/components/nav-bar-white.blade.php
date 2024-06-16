@@ -49,35 +49,37 @@
 
 
 
-        </nav> <div class="containerMobileNav">
+        </nav>
+        <div class="containerMobileNav">
 
-            <a href="{{ route('article.index') }}"><span>ARTICOLI</span></a>
+            <div style="width: auto;margin:0px" id="navItemMobile">
+                <span> ARTICOLI </span>
+                <div class="handmadeDropdownMobile">
+                    <a href="{{ route('article.index') }}">TUTTI GLI ARTICOLI</a>
+                    @auth
+                        @if (Auth::user()->is_writer)
+                            <a href="{{ route('article.create') }}">CREA IL TUO ARTICOLO</a>
+                        @endif
+                    @endauth
+                </div>
+            </div>
             @auth
+            @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
                 <div style="width: auto;margin:0px" id="navItemMobile">
                     <span> DASHBOARD </span>
                     <div class="handmadeDropdownMobile">
-                      
-                        @auth
-                        @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
-
-                                <a href="
-
-
-@auth
-    @if (Auth::user()->is_admin)
-        {{ route('admin.dashboard') }}
-    @elseif (Auth::user()->is_revisor)
-        {{ route('revisor.dashboard') }}
-    @elseif (Auth::user()->is_writer)
-        {{ route('writer.dashboard') }}
-    @endif
-@endauth   
-">DASHBOARD</a>
-@endauth
-                                <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                        @endauth
+                        @if (Auth::user()->is_admin)
+                            <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                        @endif
+                        @if (Auth::user()->is_revisor)
+                            <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
+                        @endif
+                        @if (Auth::user()->is_writer)
+                            <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                        @endif
                     </div>
                 </div>
+                @endif
             @endauth
 
 
@@ -87,7 +89,8 @@
                 <a style="border-right: 0px solid white;">
                     <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
                         @csrf
-                        <button type="submit"><span>BENTORNATO <strong style="color: rgba(255, 255, 255, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
+                        <button type="submit"><span>BENTORNATO <strong
+                                    style="color: rgba(255, 255, 255, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
 
                         </button>
                     </form>
@@ -142,48 +145,52 @@
 
             <div class="BoxNavItem">
 
-                <a class="navItem" href="{{ route('article.index') }}">
+                <div class="navItem" id="navItem">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-newspaper" viewBox="0 0 16 16">
                         <path
                             d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
                         <path
                             d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
-                    </svg><span>ARTICOLI</span></a>
-                @auth
-                    <div class="navItem" id="navItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-card-list" viewBox="0 0 16 16">
-                            <path
-                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
-                            <path
-                                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
-                        </svg>
-                        <span>
-                            DASHBOARD
-                        </span>
-                        <div class="handmadeDropdown">
-                            @auth
-                            @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
-
-                                    <a href="
-
-
-@auth
-        @if (Auth::user()->is_admin)
-            {{ route('admin.dashboard') }}
-        @elseif (Auth::user()->is_revisor)
-            {{ route('revisor.dashboard') }}
-        @elseif (Auth::user()->is_writer)
-            {{ route('writer.dashboard') }}
-        @endif
-    @endauth   
-">DASHBOARD</a>
-@endauth
-                                    <a href="{{ route('article.create') }}">INSERISCI ARTICOLO</a>
-                            @endauth
-                        </div>
+                    </svg>
+                    <span>
+                        ARTICOLI
+                    </span>
+                    <div class="handmadeDropdown">
+                        <a href="{{ route('article.index') }}">TUTTI GLI ARTICOLI</a>
+                        @auth
+                            @if(Auth::user()->is_writer)
+                            <a href="{{ route('article.create') }}">CREA IL TUO ARTICOLO</a>
+                            @endif
+                        @endauth
                     </div>
+                </div>
+                @auth
+                    @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
+                        <div class="navItem" id="navItem">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-card-list" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                                <path
+                                    d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                            </svg>
+                            <span>
+                                DASHBOARD
+                            </span>
+                            <div class="handmadeDropdown">
+                                @if (Auth::user()->is_admin)
+                                    <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
+                                @endif
+                                @if (Auth::user()->is_revisor)
+                                    <a href="{{ route('revisor.dashboard') }}">DASHBOARD REVISORE</a>
+                                @endif
+                                @if (Auth::user()->is_writer)
+                                    <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
                 @endauth
 
                 <a class="navItem" href="{{ route('careers') }}"><svg xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +214,8 @@
                                 </svg>
                             </button>
                         </form>
-                        <span>BENTORNATO <strong style="color: rgba(0, 0, 0, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
+                        <span>BENTORNATO <strong
+                                style="color: rgba(0, 0, 0, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
 
 
                     </a>

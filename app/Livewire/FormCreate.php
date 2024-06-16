@@ -100,8 +100,8 @@ class FormCreate extends Component
             $this->article->tags()->attach($newTag);
         }
 
-        session()->flash('message', 'Articolo creato correttamente.');
-        return redirect()->route('home');
+        /* session()->flash('success', 'Articolo creato correttamente.'); */
+        return redirect()->route('home')->with('message', 'Hai creato correttamente il tuo articolo');
     }
 
     public function update(){
@@ -150,8 +150,7 @@ class FormCreate extends Component
         $this->article->is_accepted = NULL;
         $this->article->save();
 
-        session()->flash('message', 'Articolo aggiornato correttamente. Verrà pubblicato nuovamente solamente dopo la revisione.');
-        return redirect()->route('writer.dashboard');
+        return redirect()->route('writer.dashboard')->with('message', 'Hai creato correttamente il tuo articolo');
     
 
     }

@@ -1,8 +1,8 @@
-@if (session('success'))
+@if (session('message'))
     <div id="popSuccess" class="pop" x-data="{ isOpen: true }" x-init="setTimeout(() => { isOpen = false; }, 3000)" >
-        <div class="alert alert-success trasp" style="width: 90%; display: flex;
-            justify-content: center;align-items:center;text-align:center;font-size:20px" role="alert" x-show="isOpen" class="popup">
-            {{ session('success') }}
+        <div class="alert alert-success trasp" style="width:100%; display: flex;
+            justify-content: center;align-items:center;font-size:20px;flex-direction:row" role="alert" x-show="isOpen" class="popup">
+            {{ session('message') }}
             <div onclick="hidePopup()" class="btnCloseM"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                     height="20" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path

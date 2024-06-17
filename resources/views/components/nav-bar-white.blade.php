@@ -19,11 +19,9 @@
             <div class="centroNav">
                 <div class="upNav">
                     <div onclick="NohideNavMobile()" class="menuMobile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg>
+                        <svg style="color: #C62828" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg>
                     </div>
                     <div class="logoMobile">
                         <a style="color: white" href="{{ route('home') }}">
@@ -33,7 +31,7 @@
                     <form class="search" method="GET" action="{{ route('article.search') }}">
                         <div style="display: flex;align-items: center;">
                             @csrf
-                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-search" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -52,22 +50,22 @@
         </nav>
         <div class="containerMobileNav">
 
-            <div style="width: auto;margin:0px" id="navItemMobile">
-                <span> ARTICOLI </span>
-                <div class="handmadeDropdownMobile">
-                    <a href="{{ route('article.index') }}">TUTTI GLI ARTICOLI</a>
-                    @auth
-                        @if (Auth::user()->is_writer)
-                            <a href="{{ route('article.create') }}">CREA IL TUO ARTICOLO</a>
-                        @endif
-                    @endauth
-                </div>
+            <div style="width: auto;margin:0px;padding-bottom:0px " id="navItemMobile">
+               
+              
+                <a style="margin-bottom: 0px" href="{{ route('article.index') }}">ARTICOLI</a>
+                @auth
+                    @if (Auth::user()->is_writer)
+                        <a style="margin-bottom: " href="{{ route('article.create') }}">CREA IL TUO ARTICOLO</a>
+                    @endif
+                @endauth
+           
             </div>
             @auth
             @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
-                <div style="width: auto;margin:0px" id="navItemMobile">
-                    <span> DASHBOARD </span>
-                    <div class="handmadeDropdownMobile">
+                <div style="width: auto;margin:0px;padding-bottom:0px;padding-top:0px" id="navItemMobile">
+                  
+                  
                         @if (Auth::user()->is_admin)
                             <a href="{{ route('admin.dashboard') }}">DASHBOARD ADMIN</a>
                         @endif
@@ -77,26 +75,26 @@
                         @if (Auth::user()->is_writer)
                             <a href="{{ route('writer.dashboard') }}">DASHBOARD REDATTORE</a>
                         @endif
-                    </div>
+                   
                 </div>
-                @endif
-            @endauth
+            @endif
+        @endauth
 
 
 
             <a href="{{ route('careers') }}"> <span>LAVORA CON NOI</span></a>
             @auth
-                <a style="border-right: 0px solid white;">
-                    <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
-                        @csrf
-                        <button type="submit"><span>BENTORNATO <strong
-                                    style="color: rgba(255, 255, 255, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
-
-                        </button>
-                    </form>
-
-
-                </a>
+            <a style="border-right: 0px solid white; display:flex;   align-items: center; margin-top:0px ">
+                <span style="color: white">BENTORNATO <strong
+                    style="color: rgba(255, 255, 255, 0.476)">{{ strtoupper(Auth::user()->name) }}</strong></span>
+                <form class="formHoverAccount" action="{{ route('logout') }}" id="logout-form" method="POST">
+                    @csrf
+                    <button style="padding-bottom: 8px" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                        <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                      </svg>
+                    </button>
+                </form>
+            </a>
             @endauth
             @guest
                 <a style="border-right: 0px solid white;" href="{{ route('login') }}">
@@ -117,7 +115,7 @@
         <div class="centroNav">
             <div class="upNav">
                 <div onclick="hideNavMobile()" class="menuMobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />

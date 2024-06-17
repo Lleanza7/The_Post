@@ -37,8 +37,7 @@
        @if (Auth::user()->is_revisor)
 
     <a href="{{ route('revisor.dashboard') }}">
-            <h6 style="  border-left: 0.5px solid black;
-        border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
+            <h6 id="richiesteDashboardH6Hover" onclick="revisor()">Revisore</h6>
     </a>
 
     @endif
@@ -70,7 +69,7 @@
             />
         </div>
 
-        <div >
+        <div  >
             <h6 style="margin: 0px" class="categorieDashboardH6">ARTICOLI RESPINTI</h6>
             <x-writer-articles-table  
             :articles="$rejectedArticles" 

@@ -559,14 +559,12 @@ header h2 {
     flex-direction: column;
     padding: 1vw;
     align-items: start;
-    margin-top: 20px;
+    margin-top: 10px;
     height: auto;
-
-
-
-
-
+    
 }
+
+
 
 .infoCardDateLarge {
     display: flex;
@@ -593,9 +591,8 @@ header h2 {
 
 .infoCardLarge h4 {
     font-size: clamp(0.8rem, 1.5vw, 1.5rem);
-
     text-align: start;
-    height: 50px;
+    height: auto;
 
 
 
@@ -621,23 +618,23 @@ header h2 {
 }
 
 .divHover {
-    height: 98%;
+    height: 95%;
     width: 95%;
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0);
     background-color: rgba(245, 222, 179, 0);
-    top: 0;
 
-    top: auto;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 9.5%);
+    transform: translate(-50%, -50%);
 
 }
 
 .divHover:hover {
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
-    margin-top: 20px;
+   
 
 
 }
@@ -1754,7 +1751,7 @@ a {
     height: 100%;
     width: 100%;
     overflow-y: scroll;
-  
+
 
 }
 
@@ -1765,9 +1762,10 @@ a {
 }
 
 .containerSettingRedator {
-    height: 100%;
+    height: auto;
     width: 100%;
     overflow-y: scroll;
+
 }
 
 #adminH6Dashboard {
@@ -1780,6 +1778,13 @@ a {
 
     background-color: black;
     color: white;
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black
+}
+
+#revisorH6Dashboard {
+    border-left: 0.5px solid rgb(255, 255, 255);
+    border-right: 0.5px solid rgb(255, 255, 255)
 }
 
 #redatorH6Dashboard {
@@ -1808,6 +1813,7 @@ a {
     margin-bottom: 0px;
     border-left: 0.5px solid #c9c9c993;
     border-right: 0.5px solid #c9c9c993;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
 
 
 }
@@ -1817,8 +1823,10 @@ a {
     color: white;
     margin-top: 40px;
     text-align: center;
-    padding: 30px;
+    padding: 5% 3%;
     margin-bottom: 0px;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+
 }
 
 #kevin {
@@ -1846,7 +1854,8 @@ a {
 
 .attivaBottone,
 .aggiornaBottone,
-.eliminaBottone, .revisioneBottone{
+.eliminaBottone,
+.revisioneBottone {
     border: none;
     padding: 10px 20%;
     width: auto;
@@ -1858,29 +1867,29 @@ a {
     height: 100%;
     margin: 0px 5px;
     position: relative;
-    
+
 
 }
 
-.revisioneBottone{
+.revisioneBottone {
     padding: 10px 20%;
 }
 
 
-.revisioneBottone:hover{
-color: white;
-background-color: #20a4e1;
-border-radius: 20px;
-transition: all 1s;
+.revisioneBottone:hover {
+    color: white;
+    background-color: #20a4e1;
+    border-radius: 20px;
+    transition: all 1s;
 
 }
 
-.attivaBottone{
+.attivaBottone {
     margin: 7px 0px;
 }
 
 
-.eliminaBottone{
+.eliminaBottone {
     padding: 10px 3vw;
 }
 
@@ -1922,9 +1931,13 @@ transition: all 1s;
 
 }
 
+.tabellaCategorie svg {
+    height: 1.7vh;
+}
+
+
 .tabellaCategorie input::placeholder {
     font-size: clamp(0.7rem, 1vw, 0.9rem)
-
 }
 
 .tabellaCategorie input {
@@ -1945,46 +1958,98 @@ transition: all 1s;
     justify-content: space-around;
 }
 
-.spanIconAggiorna, .spanIconElimina{
+.spanIconAggiorna,
+.spanIconElimina {
     display: none;
 }
 
 
-.aWriter{
-    padding: 10px 20%;
-    margin: 1px;
+.spanIconRedattoreVisualiza {
+    display: none;
+}
+
+.spanIconRedattoreModifica {
+    display: none;
+}
+
+.spanIconRedattoreElimina {
+    display: none;
+}
+
+.divBoxButtonReddatore {
+    display: flex;
     width: 100%;
-    border: none;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: all 1s;
-    font-family: sottile;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    align-items: center;
+
 
 }
 
-.aWriter:hover{
-    cursor: pointer;
+
+
+.divBoxButtonReddatore button {
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: all 1s;
+}
+
+.divBoxButtonReddatore a {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5px;
+    margin: 0px;
+    color: white;
+    width: 100%;
+    transition: all 1s;
+}
+
+.divBoxButtonReddatore button:hover {
     border-radius: 20px;
     transition: all 1s;
-
+    background-color: #C62828;
 }
 
-#aWriterVisualiza:hover{
-    color: white;
+.divBoxButtonReddatore a:hover {
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+#aRedatoreVisualiza:hover {
     background-color: #20a4e1;
 }
 
-
-#aWriterEdit:hover{
-    color: white;
+#aRedatoreModifica:hover {
     background-color: #ECBD00;
 }
 
-#aWriterDelete:hover{
-    color: white;
-    background-color: #C62828;
+.divBoxButtonReddatore span svg {
+    height: 1.7vh;
+
+}
+
+.divBoxBotton {
+    flex: 1;
+    padding: 0.8rem;
+    width: 100%
+}
+
+#richiesteDashboardH6Hover{
+    border-left: 0.5px solid black;
+        border-right: 0.5px solid black;
+}
+
+#richiesteDashboardH6Hover:hover{
+    border-left: 0.5px solid white;
+    border-right: 0.5px solid white;
 }
 
 /*Tablet*/
@@ -2118,7 +2183,37 @@ transition: all 1s;
         flex-direction: column;
     }
 
+    .divBoxBotton {
+      
+        padding: 1.7rem 0.2rem;
+ 
+    }
 
+
+
+
+    .imgCardLarge {
+        height: 35vh;
+    }
+
+   
+    .cardHomeSmall {
+     
+        height: 30vh;
+    }
+
+    .cardHomeSmall img {
+        height: 30vh;
+    }
+
+    .containerAllCard {
+        height: 450px;
+    }
+
+    .divImg{
+        height: auto;
+        padding: 30px 0px; 
+    }
 
 }
 
@@ -2254,7 +2349,8 @@ transition: all 1s;
     }
 
     .divImg {
-        height: 25vh;
+        height: auto;
+        padding: 25px 0px;
     }
 
     .divImg p {
@@ -2410,63 +2506,172 @@ transition: all 1s;
     }
 
 
-    .formTabellaCategorie{
-    width: 80%;
+    .formTabellaCategorie {
+        width: 80%;
     }
 
 
-.spanAggiorna{
-    display: none;
-}
+    .spanAggiorna {
+        display: none;
+    }
 
-.spanElimina{
-    display: none;
-}
+    .spanElimina {
+        display: none;
+    }
 
-.spanIconAggiorna{
-    display: block;
-    color: #ECBD00;
-    padding: 10px;
-    
-}
-
-.spanIconElimina{
-    display: block;
-    color: #C62828;
-    padding: 10px;
-    
-
-}
-
-.aWriter{
-padding: 0px;
-}
+    .spanTextRedatore {
+        display: none;
+    }
 
 
-
-.spanIconAggiorna:hover{
-background-color: rgba(255, 255, 255, 0);
-color: white;
-padding: 10px;
-    
-}
-
-.spanIconElimina:hover{
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    padding: 10px;
-}
+    .spanIconRedattoreVisualiza {
+        display: block;
+        padding: 3px;
 
 
-.aggiornaBottone, .eliminaBottone{
-    background-color: rgba(255, 255, 255, 0);
-    padding: 0px;
+    }
 
-}
+    .spanIconRedattoreModifica {
+        display: block;
+        padding: 3px;
 
-.revisioneBottone{
-    padding: 10px 5px;
-}
 
+    }
+
+    .spanIconRedattoreElimina {
+        display: block;
+        padding: 3px;
+
+
+    }
+
+    .spanIconRedattoreVisualiza:hover {
+        display: block;
+        padding: 3px;
+        background-color: #ffffff00;
+
+    }
+
+    .spanIconRedattoreModifica:hover {
+        display: block;
+        padding: 3px;
+        background-color: #ffffff00;
+
+    }
+
+    .spanIconRedattoreElimina:hover {
+        display: block;
+        padding: 3px;
+        background-color: #ffffff00;
+
+    }
+
+
+    .spanIconAggiorna {
+        display: block;
+        color: #000000;
+        padding: 10px;
+
+    }
+
+    .spanIconElimina {
+        display: block;
+        color: #000000;
+        padding: 10px;
+    }
+
+
+
+    .aWriter {
+        padding: 0px;
+    }
+
+
+
+    .spanIconAggiorna:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        padding: 10px;
+
+    }
+
+    .spanIconElimina:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        padding: 10px;
+    }
+
+
+    .aggiornaBottone,
+    .eliminaBottone {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0px;
+
+    }
+
+    .revisioneBottone {
+        padding: 10px 5px;
+    }
+
+    .divBoxButtonReddatore {
+        flex-direction: column;
+    }
+
+    .divBoxButtonReddatore a {
+        background-color: transparent;
+
+    }
+
+    .divBoxButtonReddatore button {
+        background-color: transparent;
+        color: #000000;
+
+    }
+
+    .divBoxButtonReddatore button:hover {
+        background-color: #C62828;
+        color: white;
+
+
+    }
+
+    #aRedatoreVisualiza {
+        color: #000000;
+    }
+
+    #aRedatoreVisualiza:hover {
+        background-color: #20a4e1;
+        color: white;
+    }
+
+    #aRedatoreModifica {
+        color: #000000;
+    }
+
+    #aRedatoreModifica:hover {
+        background-color: #ECBD00;
+        color: white;
+    }
+    .divBoxBotton {
+        padding: 0.2rem;
+    }
+
+    .imgCardLarge {
+        height: 25vh;
+    }
+
+   
+    .cardHomeSmall {
+     
+        height: 25vh;
+    }
+
+    .cardHomeSmall img {
+        height: 25vh;
+    }
+
+    .containerAllCard {
+        height: 350px;
+    }
 
 }

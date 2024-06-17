@@ -35,8 +35,7 @@
         @endif
         @if (Auth::user()->is_revisor)
         <a  href="{{ route('revisor.dashboard') }}">
-            <h6  style=" border-left: 0.5px solid black;
-        border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
+            <h6 id="richiesteDashboardH6Hover"   onclick="revisor()">Revisore</h6>
           </a>
         @endif
         @if (Auth::user()->is_writer)
@@ -71,7 +70,7 @@
    
    
         <div>
-            <h6 class="richiesteDashboardH6" >Revisore</h6>
+            <h6  class="richiesteDashboardH6" >Revisore</h6>
             <x-requests-table  :roleRequest="$revisorRequests" role="revisore" />
         </div>
    

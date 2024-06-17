@@ -34,8 +34,7 @@
    <a href="{{ route('admin.dashboard') }}">     <h6  onclick="admin()">Amministratore</h6></a>
    @endif
    @if (Auth::user()->is_revisor)
-        <h6 id="revisorH6Dashboard" style=" border-left: 0.5px solid black;
-    border-right: 0.5px solid black;" onclick="revisor()">Revisore</h6>
+        <h6 id="revisorH6Dashboard"  onclick="revisor()">Revisore</h6>
       @endif
       @if (Auth::user()->is_writer)
        <a href="{{ route('writer.dashboard') }}">

@@ -91,9 +91,10 @@
                     <span>ACCEDI</span></a>
             @endguest
         </div>
+       
     </div>
 
-
+ 
 
 
 
@@ -246,9 +247,10 @@
 
             </div>
 
+            
         </div>
-
     </nav>
+    <div style=" width:100%;;height:auto;position: absolute;top:100px;">     <x-session /></div>
 
     <script>
         function hideNavMobile() {

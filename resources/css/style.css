@@ -331,10 +331,11 @@ header h2 {
     border: 0.5px solid white;
     display: none;
     border-top: none;
+}
 
-
-
-
+.handmadeDropdown a{
+padding: 8px 0px;
+text-align: center;
 }
 
 .formHoverAccount button {
@@ -562,7 +563,7 @@ header h2 {
     align-items: start;
     margin-top: 10px;
     height: auto;
-    
+
 }
 
 
@@ -635,7 +636,7 @@ header h2 {
 .divHover:hover {
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
-   
+
 
 
 }
@@ -1432,12 +1433,12 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 600px;
+    height: auto;
 }
 
 .boxPreviewArticleCreate {
     width: 50%;
-    height: 100%;
+    height: auto;
     background-color: white;
     padding: 20px;
     padding-bottom: 25px
@@ -1467,16 +1468,16 @@ a {
 
 
 .formCreateArticle {
-    height: 80vh;
+    height: auto;
     padding: 20px;
     padding-top: 0px;
 }
 
 .containerFormCreateArticle {
     width: 50%;
-    height: auto;
+
     background-color: white;
-    height: auto
+
 }
 
 .mainShow {
@@ -1881,7 +1882,7 @@ a {
 .revisioneBottone:hover {
     color: white;
     background-color: #2E7D32;
-   
+
     transition: all 1s;
 
 }
@@ -2041,23 +2042,55 @@ a {
     width: 100%
 }
 
-#richiesteDashboardH6Hover{
+#richiesteDashboardH6Hover {
     border-left: 0.5px solid black;
-        border-right: 0.5px solid black;
+    border-right: 0.5px solid black;
 }
 
-#richiesteDashboardH6Hover:hover{
+#richiesteDashboardH6Hover:hover {
     border-left: 0.5px solid white;
     border-right: 0.5px solid white;
 }
 
 
 
-.divErrorBox{
-color: red;
-font-size: clamp(0.7rem, 1vw, 0.9rem)
+.divErrorBox {
+    color: red;
+    font-size: clamp(0.7rem, 1vw, 0.9rem)
 }
 
+
+.successPopup {
+    background: hsl(123, 46%, 34%);
+    height: auto;
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+font-family: sottile;
+}
+
+.deniedPopup{
+    background-color:#C62828;
+    height: auto;
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+font-family: sottile;
+}
 
 
 
@@ -2193,9 +2226,9 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
     }
 
     .divBoxBotton {
-      
+
         padding: 1.7rem 0.2rem;
- 
+
     }
 
 
@@ -2205,9 +2238,9 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
         height: 35vh;
     }
 
-   
+
     .cardHomeSmall {
-     
+
         height: 30vh;
     }
 
@@ -2219,20 +2252,20 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
         height: 450px;
     }
 
-    .divImg{
+    .divImg {
         height: auto;
-        padding: 30px 0px; 
+        padding: 30px 0px;
     }
 
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
     .containerMobileNav {
         display: none;
     }
 
-    .navMobile{
-    background-color: transparent;
+    .navMobile {
+        background-color: transparent;
     }
 }
 
@@ -2590,7 +2623,7 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
         padding: 10px;
         background-color: black;
         transition: all 0.5s;
-        
+
 
     }
 
@@ -2638,41 +2671,42 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
 
     .divBoxButtonReddatore {
         flex-direction: column;
-      
+
     }
 
     .divBoxButtonReddatore a {
-       color: white;
+        color: white;
 
     }
 
     .divBoxButtonReddatore button {
-  
-    
+
+
         color: white;
 
     }
-   
+
 
     .divBoxButtonReddatore button:hover {
         background-color: #C62828;
-      
+
 
 
     }
 
-   
+
 
     #aRedatoreVisualiza:hover {
         background-color: #2E7D32;
-    
+
     }
 
-   
+
     #aRedatoreModifica:hover {
         background-color: #ECBD00;
-      
+
     }
+
     .divBoxBotton {
         padding: 0.2rem;
     }
@@ -2681,9 +2715,9 @@ font-size: clamp(0.7rem, 1vw, 0.9rem)
         height: 22vh;
     }
 
-   
+
     .cardHomeSmall {
-     
+
         height: 22vh;
     }
 

@@ -44,11 +44,11 @@
         @endif
         @endauth
       </div>
-    
+      <x-session/>
       <div class="containerSettingAdmin">
         <!-- Contenuto per l'amministratore -->
 
-   <x-session/>
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

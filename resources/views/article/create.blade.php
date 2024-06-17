@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body style="   background-color: #E8ECEF;">
+<body style="   background-color: #E8ECEF; ">
     <x-nav-bar-white />
     <div class="headerIndex">
 

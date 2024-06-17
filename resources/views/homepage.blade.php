@@ -1,7 +1,7 @@
 <x-layout>
     <header>
         <x-navbar-new />
-        <x-session/>
+  
         <p>LUCA & APOL</p>
         <h2>Notizie globali e voci locali, il tuo <br>
             spazio per <span class="txt-rotate" data-period="1000"

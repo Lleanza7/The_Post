@@ -27,7 +27,7 @@
                             <h1>THE|NEWS</h1>
                         </a>
                     </div>
-                    <form class="search" method="GET" action="{{ route('article.search') }}">
+                    <form  onclick="hideNavMobileSearch()" class="search" method="GET" action="{{ route('article.search') }}">
                         <div style="display: flex;align-items: center;">
                             @csrf
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -35,7 +35,7 @@
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                             </svg>
-                            <input type="search" aria-label="Search" placeholder="Cerca un articolo" name="query">
+                           
                         </div>
                 </div>
                 </form>
@@ -94,7 +94,65 @@
        
     </div>
 
- 
+    <div class="searchContainerMobile">
+        <nav style="position: relative;background-color: white; box-shadow: 0 4px 30px rgb(255, 255, 255);"
+            class="nav2">
+            <a class="logo" href="{{ route('home') }}">
+                <h1>THE|NEWS</h1>
+            </a>
+            <div style="background-color: white" class="centroNav">
+                <div style="background-color: white" class="upNav">
+                    <div class="menuMobile">
+                        <svg style="color: white;cursor:default" xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
+                    </div>
+                    <div class="logoMobile">
+                        <a style="color: white" href="{{ route('home') }}">
+                            <h1>THE|NEWS</h1>
+                        </a>
+                    </div>
+                    <div onclick="NohideNavMobileSearch(),NohideNavMobile()" class="menuMobile">
+                        <svg style="color: #C62828;cursor:pointer" xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
+                    </div>
+                </div>
+        </nav>
+        <div class="formMobileSearch">
+            <form method="GET" action="{{ route('article.search') }}">
+                <div style="display: flex;align-items: center;">
+                    @csrf
+                    <input type="search" aria-label="Search" placeholder="CERCA UN ARTICOLO" name="query">
+                </div>
+            </form>
+            <div class="searchMenuCategori">
+              <a href=" {{route('article.byCategory', ['category' => '4'])}}">  <button>SPORT</button>
+            </a>
+            <a href="{{route('article.byCategory', ['category' => '2'])}}"> <button>ECONOMIA</button>
+            </a>
+              <a href="{{route('article.byCategory', ['category' => '6'])}}">  <button>TECH</button>
+            </a>
+                <a href="{{route('article.byCategory', ['category' => '1'])}}"><button>POLITICA</button>
+                </a>
+            </div>
+            <div class="searchMenuCategori">
+                <a href="{{route('article.byCategory', ['category' => '5'])}}"> <button>INTRATTENIMENTO</button>
+                </a>
+            
+               <a href="{{route('article.byCategory', ['category' => '3'])}}"> <button>FOOD&DRINK</button>
+            </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
 
@@ -121,11 +179,13 @@
                 <form class="search" method="GET" action="{{ route('article.search') }}">
                     <div style="display: flex;align-items: center;">
                         @csrf
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-search" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                        </svg>
+                      <span onclick="hideNavMobileSearch()" class="searchDesktop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                      </span>
 
                         <input type="search" aria-label="Search" placeholder="Cerca un articolo" name="query">
                     </div>
@@ -258,7 +318,8 @@
             
         </div>
     </nav>
-    <div style=" width:100%;;height:auto;position: absolute;top:100px;">     <x-session /></div>
+    <div style=" width:100%;;height:auto;position: absolute;top:100px;">     <x-session />
+    </div>
 
     <script>
         function hideNavMobile() {
@@ -270,6 +331,18 @@
             var navMobile = document.querySelector('.navMobile');
             navMobile.style.display = 'none';
         }
+
+        function hideNavMobileSearch() {
+            var searchContainerMobile = document.querySelector('.searchContainerMobile');
+            searchContainerMobile.style.display = 'block';
+        }
+
+        function NohideNavMobileSearch() {
+            var searchContainerMobile = document.querySelector('.searchContainerMobile');
+            searchContainerMobile.style.display = 'none';
+        }
+
+
     </script>
 
 </body>

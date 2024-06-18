@@ -163,19 +163,39 @@ header h2 {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
     width: 150px;
-    transition: width 1s;
+    transition: all 1s;
     margin: 0px 10px;
     color: #dde1e7;
+    border: 0.5px solid rgba(255, 255, 255, 0.395);
+    border-radius: 30px;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    padding: 0px 5px;
 
 }
 
 .upNav input:hover {
 
-    width: 300px;
-    transition: width 1s;
+    width: 200px;
+    transition: all 1s;
     border: 0.5px solid rgba(255, 255, 255, 0.395);
     padding: 0px 5px;
     border-radius: 30px;
+
+
+}
+
+.upNav input::placeholder {
+    color: rgba(255, 255, 255, 0.505);
+    text-align: center;
+    position: relative;
+    left: 6%;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+
+
+
+
+
+
 }
 
 
@@ -323,8 +343,7 @@ header h2 {
     flex-direction: column;
     position: absolute;
     top: 49px;
-    background: rgba(0, 0, 0, 0.113);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.553);
     backdrop-filter: blur(10.7px);
     -webkit-backdrop-filter: blur(10.7px);
     width: 100.5%;
@@ -333,9 +352,10 @@ header h2 {
     border-top: none;
 }
 
-.handmadeDropdown a{
-padding: 8px 0px;
-text-align: center;
+.handmadeDropdown a {
+    padding: 8px 0px;
+    text-align: center;
+    font-size: 0.8vw;
 }
 
 .formHoverAccount button {
@@ -417,6 +437,7 @@ text-align: center;
 .search {
     padding: 0px;
     margin: 0px;
+    cursor: pointer;
 }
 
 
@@ -727,6 +748,7 @@ header h2 span {
 input::placeholder {
     color: rgba(255, 255, 255, 0.505);
     text-align: start;
+
 
 }
 
@@ -1707,14 +1729,14 @@ a {
 .containerDashboard {
     background-color: white;
     width: auto;
-    height: 80vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .containerListDashboard {
 
-    height: 10%;
+    height: 5vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1826,9 +1848,9 @@ a {
     color: white;
     margin-top: 40px;
     text-align: center;
-    padding: 3% 3%;
+    padding: 1% 3%;
     margin-bottom: 0px;
-    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.7rem, 1.1vw, 1.5rem);
 
 }
 
@@ -2058,6 +2080,9 @@ a {
     color: red;
     font-size: clamp(0.7rem, 1vw, 0.9rem);
     margin-top: 5px;
+
+
+
 }
 
 
@@ -2074,11 +2099,33 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     color: white;
-font-family: sottile;
+    font-family: sottile;
 }
 
-.deniedPopup{
-    background-color:#C62828;
+#popSuccess span {
+    color: #C62828;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+#popDenied span {
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+
+
+.deniedPopup {
+    background-color: #C62828;
     height: auto;
     padding: 20px 10px;
     width: 100%;
@@ -2090,13 +2137,100 @@ font-family: sottile;
     margin-top: 10px;
     margin-bottom: 10px;
     color: white;
-font-family: sottile;
+    font-family: sottile;
 }
 
+.searchContainerMobile {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    position: fixed;
+    z-index: 11113;
+    display: none;
 
+}
+
+.searchDesktop {
+    display: none;
+}
+
+.formMobileSearch {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 30px;
+
+}
+
+.formMobileSearch form {
+    width: 80%;
+    background-color: white;
+
+
+}
+
+.formMobileSearch input {
+    width: 100%;
+    height: auto;
+    padding: 3vh 20px;
+    border: none;
+    border: 0.5px solid black;
+    border-radius: 50px;
+
+
+
+}
+
+.formMobileSearch input::placeholder {
+    color: #939393;
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-family: sottile;
+    position: relative;
+    left: 3%;
+}
+
+.searchMenuCategori {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px;
+    margin-top: 20px;
+}
+
+.searchMenuCategori button {
+    border: none;
+    border: 0.5px solid black;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    background-color: white;
+    font-family: sottile;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+    transition: background 1s;
+
+}
+
+.searchMenuCategori button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background 1s;
+}
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
+
+    .handmadeDropdown a {
+       
+        font-size: 1.5vw;
+    }
 
     .imageShow {
         height: 70vh;
@@ -2274,6 +2408,11 @@ font-family: sottile;
 
 /*Mobile*/
 @media screen and (max-width: 700px) {
+
+
+    .searchDesktop {
+        display: block;
+    }
 
     .boxWorkDescription {
         padding-bottom: 0px;

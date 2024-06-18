@@ -353,9 +353,10 @@ header h2 {
 }
 
 .handmadeDropdown a {
-    padding: 8px 0px;
+    padding: 15px 0px;
     text-align: center;
     font-size: 0.8vw;
+    margin-top: 0px;
 }
 
 .formHoverAccount button {

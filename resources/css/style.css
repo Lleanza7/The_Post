@@ -2056,7 +2056,8 @@ a {
 
 .divErrorBox {
     color: red;
-    font-size: clamp(0.7rem, 1vw, 0.9rem)
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    margin-top: 5px;
 }
 
 

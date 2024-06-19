@@ -14,5 +14,6 @@
 <body style="background-color: #E8ECEF"> 
     
     {{ $slot }}
+
 </body>
 </html>

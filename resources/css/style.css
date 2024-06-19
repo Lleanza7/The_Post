@@ -731,9 +731,97 @@ footer {
     background-color: #000000;
     height: 300px;
     margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 222222;
+    color: white;
+}
+
+footer h1{
+    font-size: clamp(2.5rem, 3vw, 3.5rem);
+}
 
 
 
+
+
+.menuFooter{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a ,button{
+
+    margin: 0px 10px;
+    background-color: #000000;
+    color: rgba(225, 225, 225, 0.867);
+    border: none;
+    font-size: clamp(0.8rem, 1.1vw, 0.7rem);
+    padding: 0px;
+    font-family: sottile;
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer button:hover{
+    color: white;
+}
+
+
+footer button{
+    width: auto;
+    margin: 0px;
+}
+footer button strong{
+    color: white;
+}
+
+.containerNewleter{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.containerNewleter input{
+    background-color: transparent;
+    border: none;
+    border: 0.5px solid white;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 0px 10px;
+    width: 190px;
+    transition: width 1s;
+}
+
+.containerNewleter h2{
+    font-size: clamp(1.7rem, 1.8vw, 2rem);
+    margin: 0px;
+}
+
+.containerNewleter  input::placeholder{
+    text-align: center;
+}
+
+.containerNewleter input:hover{
+    width: 220px;
+    transition: width 1s;
+}
+
+.containerSocialFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    display: none;
+}
+
+.containerSocialFooter a:hover{
+    color: white;
 
 }
 
@@ -2227,6 +2315,10 @@ a {
 
 /*Tablet*/
 @media screen and (max-width: 1124px) {
+
+    .containerSocialFooter{
+        display: flex;
+    }
 
     .handmadeDropdown a {
        

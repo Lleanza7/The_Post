@@ -513,5 +513,5 @@
         </div>
         
     </main>
-    <footer></footer>
+    <x-footer/>
 </x-layout>

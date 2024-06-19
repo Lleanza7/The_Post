@@ -78,3 +78,4 @@
     </main>
 
 </x-layout>
+<x-footer/>

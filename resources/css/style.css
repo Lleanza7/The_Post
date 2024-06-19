@@ -1086,6 +1086,9 @@ a {
     backdrop-filter: blur(10.7px);
     -webkit-backdrop-filter: blur(10.7px);
 }
+.containerFeautured a{
+    color: white;
+}
 
 .social a svg:hover{
     color: rgb(144, 144, 144);

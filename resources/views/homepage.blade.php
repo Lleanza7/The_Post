@@ -9,7 +9,7 @@
         </h2>
         <div class="containerFeautured">
             <h6>IN EVIDENZA</h6>
-            <p>Politica - Finanza - Sport - Tech</p>
+            <p><a href="{{route('article.byCategory', ['category' => '1'])}}">Politica</a> - <a href="{{route('article.byCategory', ['category' => '2'])}}">Economia</a> - <a href="{{route('article.byCategory', ['category' => '6'])}}">Tech</a> </p>
         </div>
     </header>
     <main>

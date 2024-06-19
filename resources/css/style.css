@@ -1087,6 +1087,10 @@ a {
     -webkit-backdrop-filter: blur(10.7px);
 }
 
+.social a svg:hover{
+    color: rgb(144, 144, 144);
+}
+
 .nav2White h1 {
     color: black;
 }

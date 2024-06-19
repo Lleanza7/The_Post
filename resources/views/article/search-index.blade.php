@@ -34,6 +34,7 @@
 
                 <div class="container my-5">
                     <div  style="background-color:white;" class="row p-3">
+                        @if(count($articles) > 0)
                   @foreach ($articles as $article)
                      
                           <div  class="col-12 col-md-6 col-lg-4 col-ml-4 col-sm-12 p-2">
@@ -47,6 +48,9 @@
                                   :tags="$article->tags" readDuration="{{ $article->readDuration() }}" />
                           </div>
                       @endforeach
+                      @else
+                      <p style="height: 20vh;display: flex;justify-content: center;align-items: center">nessun articolo trovato</p>
+                  @endif
                       
                         
                     </div>

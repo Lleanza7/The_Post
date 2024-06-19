@@ -42,7 +42,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -57,7 +57,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -77,7 +77,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}                     </div>
+                                        <h4>{{Str::limit($article->title, 36) }}                     </div>
                                 </div>
                             </a>
                         @elseif ($key == 3)
@@ -91,7 +91,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif
@@ -116,7 +116,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -130,7 +130,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -149,7 +149,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -164,7 +164,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif
@@ -208,7 +208,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -222,7 +222,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -241,7 +241,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -256,7 +256,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif
@@ -281,7 +281,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -295,7 +295,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -314,7 +314,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -329,7 +329,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif
@@ -374,7 +374,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -388,7 +388,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -407,7 +407,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -422,7 +422,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif
@@ -447,7 +447,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @elseif ($key == 2)
@@ -460,7 +460,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -479,7 +479,7 @@
                                             <p class="categoryCard">{{ $article->category->name }}</p>
                                             <p>{{ $article->created_at }}</p>
                                         </div>
-                                        <h4>{{Str::limit($article->title, 50) }}</h4>
+                                        <h4>{{Str::limit($article->title, 36) }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -494,7 +494,7 @@
                                         <p class="categoryCard">{{ $article->category->name }} </p>
                                         <p>{{ $article->created_at }}</p>
                                     </div>
-                                    <h4>{{Str::limit($article->title, 50) }}</h4>
+                                    <h4>{{Str::limit($article->title, 36) }}</h4>
                                 </div>
                             </a>
                         @endif

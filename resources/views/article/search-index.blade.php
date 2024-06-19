@@ -49,7 +49,7 @@
                           </div>
                       @endforeach
                       @else
-                      <p style="height: 20vh;display: flex;justify-content: center;align-items: center">nessun articolo trovato</p>
+                      <p style="height: 20vh;display: flex;justify-content: center;align-items: center;font-family:sottile">nessun articolo trovato</p>
                   @endif
                       
                         

@@ -435,7 +435,7 @@
         <div id="test2" class="test">
             <div class="boxCards">
                 <div class="containerCard1">
-                    @foreach ($articleSport as $key => $article)
+                    @foreach ($articleTech as $key => $article)
                         @if ($key == 0)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeLarge">
                                 <div class="imgCardLarge">
@@ -468,7 +468,7 @@
                     @endforeach
                 </div>
                 <div class="containerCard2">
-                    @foreach ($articleSport as $key => $article)
+                    @foreach ($articleTech as $key => $article)
                         @if ($key == 1)
                             <a href="{{ route('article.show', compact('article')) }}" class="cardHomeSmall">
                                 <div class="divHoverSmall"></div>

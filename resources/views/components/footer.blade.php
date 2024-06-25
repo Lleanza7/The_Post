@@ -1,5 +1,5 @@
 <footer>
-    <h1>THE|POST</h1>
+    <h1>THE|NEWS</h1>
     <div class="menuFooter">
         <a href="{{ route('article.index') }}">ARTICOLI</a>
         <a href="{{ route('careers') }}">LAVORA CON NOI</a>
